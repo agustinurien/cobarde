@@ -1,14 +1,88 @@
-<div>
-    footer
-</div>
+<section>
+    <div class="contacto">
+        <p class="contactoText">
+            Recibí emails en
+los que te
+recuerdo que
+dejes de ser
+cobarde.
+        </p>
+        <div class="contactoForm">
+            contacto
+        </div>
+    </div>
+    <div class="logoContainer">
+        <img src="../../../public/images/2.jpg" alt="">
+    </div>
+    <div class="logoText">
+        <img src="../../../public/images/4.png" alt="">
+    </div>
+    <p>Cobarde. Todos Los Derechos Reservados. Política de privacidad.</p>
+
+</section>
 
 <style>
-    div {
+    section {
+        margin-top: 150px;
+        background-image: linear-gradient(to bottom,  #161616, black 60%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+    .contacto{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: red;
+        height: fit-content;
+        width: 50%;
+    }
+    .contactoText{
+        font-family: 'TightEB', sans-serif;
+        font-size: 2.5rem;
+        width: 35%;
+        padding: 0px;
+        padding-left: 20px;
+        margin: 0px;
+    }
+    .contactoForm{
+        background-color: grey;
+        width: 56%;
+        height: 300px;
+        border-radius: 25px;
+    }
+    .logoContainer{
+        height: 500px;
+        width: 500px;
+    }
+    .logoContainer img{
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        object-position: center 80px;
+    }
+    .logoText{
+        background-color: pink;
+        height: 100px;
+        width: 350px;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
-        background-color: #000000;
-        color: #ffffff;
     }
+    .logoText img{
+        background-color: pink;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    p{
+        font-family: 'TightR', sans-serif;
+        font-size: 0.6rem;
+        padding-bottom: 80px;
+    }
+
 </style>
