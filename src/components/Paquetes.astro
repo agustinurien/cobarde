@@ -1,55 +1,133 @@
+---
+import entrada from '../../public/images/ENTRADA.png'
+import platoP from '../../public/images/PLATOPRINCIPAL.png'
+import postre from '../../public/images/POSTRE.png'
+import { MdArrowOutward } from "react-icons/md";
+
+---
+
 <section>
     <div class="paquetesContainer">
-        <h2>¿Cómo comparto mi propósito?</h2>
-        <h4>A través de charlas, encuentros virtuales o presenciales y conferencias,
+        <h2 class="subtituloProposito">¿Cómo comparto mi propósito?</h2>
+        <h4 class="sloganProposito">A través de charlas, encuentros virtuales o presenciales y conferencias,
             comparto mi mensaje en distintos espacios y con diversos grupos.</h4>
         <div class="paquetes">
-            <div>
-                <h3>Paquete 1</h3>
-                <p>Este paquete incluye...</p>
-                <a href="">Comprar</a>
+
+            <div class="paquete">
+                <div class="textoPaquetes">
+                    <span>ENTRADA</span>
+                    <h4>¿Estás listo para eliminar tu gran excusa?</h4>
+                    <p>Eliminá todos tus pretextos,
+                        haciéndote cargo de tu vida y
+                        decidiendo quien querés ser.</p>
+                </div>
+                <div class="platoImgContainer">
+                    
+                    <img src={entrada.src} alt="">
+                </div>
+                <div class="buttons">
+                    <a href="">MAS INFO</a>
+                    <a href="" class="arrow"><MdArrowOutward/></a>
+                </div>
             </div>
-            <div>
-                <h3>Paquete 2</h3>
-                <p>Este paquete incluye...</p>
-                <a href="">Comprar</a>
+
+            <div class="paquete">
+                <div class="textoPaquetes">
+
+                    <span>PLATO PRINCIPAL</span>
+                    <h4>¿Cuanto
+                        vale tu
+                        vida?
+                    </h4>
+                    <p>Emprenderás un viaje interior
+                        que fortalecerá tu autoestima,
+                        te llevará a una mayor auto
+                        comprensión y te permitirá
+                        experimentar un profundo
+                        amor propio.</p>
+                    </div>
+                    <div class="platoImgContainer">
+
+                        <img src={platoP.src} alt="">
+                    </div>
+                    <div class="buttons">
+                        <a href="">MAS INFO</a>
+                        <a href="" class="arrow"><MdArrowOutward/></a>
+                    </div>
             </div>
-            <div>
-                <h3>Paquete 3</h3>
-                <p>Este paquete incluye...</p>
-                <a href="">Comprar</a>
+
+            <div class="paquete">
+                <div class="textoPaquetes">
+                    <span>POSTRE</span>
+                    <h4>¿Vas a
+                        hacer
+                        realidad
+                        tus metas?</h4>
+                    <p>Definí tu meta, visualizala con
+                            certeza, y aplicá las
+                            herramientas que tenés
+                            dentro para alinear tu mente y
+                            tu energía, llevando tu visión a
+                            la realidad.</p>
+                </div>
+                <div class="platoImgContainer">
+                    <img src={postre.src} alt="">
+                </div>
+                <div class="buttons">
+                    <a href="">MAS INFO</a>
+                    <a href="" class="arrow"><MdArrowOutward/></a>
+                </div>
             </div>
         </div>
+
         <div class="extras">
-            <div class="extra">
+
+            <div class="extra sobremesa">
                 <span>
                     SOBREMESA
                 </span>
-                <h4>Renová tu
+                <h4 class="tituloExtra">Renová tu
                     concepto
                     propio.</h4>
-                    <div>
+                    <div class="textoExtra">
                         <p>Hacé que tus cambios se conviertan en tu estilo
                             aplicamos la actualización de uno mismo.
                             de vida, no en una simple experiencia, para ello
                         </p>
-                        <a href="">Comprar</a>
+                        <div class="buttons">
+                            <a href="">MAS INFO</a>
+                            <a href="" class="arrow"><MdArrowOutward/></a>
+                        </div>
                     </div>
             </div>
-            <div class="extra">
+
+            <div class="extra empresa">
                 <span>
-                    SOBREMESA
+                    CHARLAS A EMPRESAS
                 </span>
-                <h4>Renová tu
-                    concepto
-                    propio.</h4>
-                    <div>
-                        <p>Hacé que tus cambios se conviertan en tu estilo
-                            aplicamos la actualización de uno mismo.
-                            de vida, no en una simple experiencia, para ello
+                <h4 class="tituloExtra2">¿Querés que tus empleados
+                    sean felices trabajando en tu
+                    empresa?</h4>
+                    <div class="textoExtra">
+                        <p>Charlas que inspiran al
+crecimiento personal dentro del
+ámbito laboral.
                         </p>
-                        <a href="">Comprar</a>
+                        <div class="buttons">
+                            <a href="">MAS INFO</a>
+                            <a href="" class="arrow"><MdArrowOutward/></a>
+                        </div>
                     </div>
+            </div>
+
+            <div class="slogan">
+                <p>
+                    Lo que haces te convierte en héroe.
+                    <br>
+                    
+                    Lo que no haces te convierte en cobarde.
+                </p>
+                    
             </div>
 
         </div>
@@ -61,58 +139,194 @@
         margin-top: 100px;
         display: flex;
         justify-content: center;
-        background-color: #000000;
+        background-color: #161616;
         color: #ffffff;
     }
     .paquetesContainer{
-        background-color: rgba(255, 255, 0, 0.145);
+        
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    h2{
+    .subtituloProposito{
+        font-family: 'TightEB', sans-serif;
+        font-size: 3rem;
         padding: 0px;
         margin: 0px;
-        font-size: 2rem;
-        width: 80%;
-        background-color: brown;
+        width: 100%;
+        
         text-align: center;
     }
-    h4{
+    .sloganProposito{
+        font-family: 'TightR', sans-serif;
         padding: 0px;
+        padding-top: 10px;
         margin: 0px;
-        font-size: 1rem;
-        width: 70%;
-        background-color: green;
+        font-size: 0.9rem;
+        width: 50%;
         text-align: center;
     }
 
     .paquetes{
-        background-color: rgb(51, 74, 138);
         display: flex;
         width: fit-content;
-        
-        gap: 20px;
+        gap: 50px;
+        padding-top: 40px;
     }
-    .paquetes div{
-        background-color: red;
+    .paquetes .paquete{
+        
         display: flex;
         flex-direction: column;
-        height: 400px;
+        justify-content: space-between;
+        height: fit-content;
+        width: 165px;
+        border-radius: 25px;
+        padding: 20px;
+        border: 1px solid white;
+    }
+    .paquetes .paquete .textoPaquetes{
+        display: flex;
+        flex-direction: column;
+        
+        height: 260px;
+        
+    }
+    .paquetes span{
+        padding-bottom: 10px;
+        margin: 0px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 0.7rem;
 
+    }
+    .paquetes h4{
+        
+        margin: 0px;
+        height: fit-content;
+        width: 82%;
+        font-size: 1.5rem;
+        font-family: 'TightEB', sans-serif;
 
+    }
+    .paquetes p{
+        font-size: 0.8rem;
+        font-family: 'TightR', sans-serif;
+        margin: 0px;
+        padding-top: 10px;
+        height: fit-content;
+        width: 90%;
+    }
+    .platoImgContainer{
+        height: 150px;
+        
+    }
+    .platoImgContainer img{
+        width: 100%;
+        object-fit: cover;
+        scale: 1.5;
+        
     }
     .extras{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        
+        width: 80%;
+        margin-top: 30px;
     }
-    .extras div{
-        background-color: blue;
+    .extras .extra{
+        padding: 0px 30px;
+        padding-bottom: 5px;
         display: flex;
         flex-direction: column;
+        height: 200px;
+        border: 1px solid white;
+        border-radius: 25px;
+    }
+
+    .sobremesa{
+        background-image: url('../../public/images/fuego.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .empresa{
+        background-image: url('../../public/images/empresa.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .extras .extra span{
+        padding-top: 15px;
+        padding-bottom: 5px;
+        font-size: 0.7rem;
+        font-family: 'TightSB', sans-serif;
+    }
+    .tituloExtra{
+        font-family: 'TightEB', sans-serif;
+        font-size: 1.6rem;
+        margin: 0px;
+        width: 20%;
+        
+    }
+    .tituloExtra2{
+        font-family: 'TightEB', sans-serif;
+        font-size: 1.6rem;
+        margin: 0px;
+        width: 60%;
+        
+    }
+    
+    .textoExtra{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textoExtra{
+        display: flex;
+        justify-content: space-between;
+    }
+    .textoExtra p{
+        font-family: 'TightR', sans-serif;
+        font-size: 0.8rem;
+        width: 40%;
+        display: flex;
+    }
+    .extras .slogan{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 20px;
         height: 150px;
+        font-family: 'TightSB', sans-serif;
+        font-size: 1.5rem;
+        
+    }
+    .extras .slogan p{
+        margin: 0px;
+        line-height: 1.4;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+        padding-top: 10px;
+    }
+    .buttons a{
+        padding: 2px 10px;
+        background-color: red;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        font-family: 'TightEB', sans-serif;
+        font-size: 0.8rem;
+    }
+    .buttons .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        border-radius: 100%;
+        height: 17px;
+        width: 17px;
+
     }
 </style>

@@ -1,0 +1,167 @@
+---
+import { MdArrowOutward } from 'react-icons/md';
+
+---
+
+<section>
+    <div class="aboutMe">
+        <h2>Yanina Polo</h2>
+        <p>Autodidacta en tecnicas y estudios sobre metafisica, neurociencia, fisica cuantica, re programacion, leyes memntales, comprobados desde mi experiencia hacia el mundo.</p>
+    </div>
+    <div class="text">
+        <p>La vida es una sola ficha, con muchas
+            posibilidades. Es algo tan valioso que
+            tenemos, como la oportunidad de
+            vivirla. Hoy estás acá, y tu único
+            objetivo es vivir y dejar de ser
+            cobarde. Hay tanto por disfrutar al
+            alcance de cada uno de nosotros... Si
+            solo mirás alrededor y sentís...</p>
+        <p>Creía tener todo muy claro y sentía
+            una fuerza de lobo que se encendía
+            dentro mío, sin saber dónde debía
+            aplicarla. Al pasar el tiempo, se
+            convirtió en un gran conejo blanco
+            que representaba las excusas y
+            recreaciones que me tenían saltando
+            de un lugar a otro, rodeada de
+            distracciones, sin llegar a ninguna meta.</p>
+        <p>Hoy decidí dejar atrás ese conejo,
+            convirtiéndome y dando mi poder a
+            ese gran lobo, confiado, invencible,
+            feliz y lleno de paz mental, que sabe
+            hacia dónde va y confía en su
+            camino sin que nada ni nadie lo
+            limite.
+            <br>
+            <br>
+            Me encantaría que vos también lo
+            descubras... y dejes de ser COBARDE.</p>
+    </div>
+    <div class="buttons">
+        <a href="">Agenda una reunion conmigo</a>
+        <a href="" class="arrow"><MdArrowOutward/></a>
+    </div>
+    <div class="finalYanina">
+        <h3>Todo se basa en aprender a controlar y
+            seleccionar nuestros pensamientos</h3>
+        <div class="yaninaImage">
+            <h4>
+                Gracias
+            </h4>
+        </div>
+        <span>Que logres ver el valor que tenes dentro a traves de mis palabras es mi mayor servicio.</span>
+    </div>
+</section>
+
+<style>
+    section{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutMe{
+        border-top: 1px solid white;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 45%;
+        height: 480px;
+        color: white;
+        background-image: linear-gradient(rgba(0, 0, 0, 0) 80%, #161616), 
+                      url('../../public/images/ojos.jpg');
+    }
+    .aboutMe p{
+        width: 32%;
+        font-family: 'TightTI', sans-serif;
+        color: rgb(255, 255, 255);
+        
+    }
+    .aboutMe h2{
+        font-family: 'TightEB', sans-serif;
+        font-size: 6rem;
+        margin: 0px;
+        color: red;
+    }
+    .text{
+        display: flex;
+        gap: 15px;
+        width: 45%;
+        color: white;
+    }
+    .text p{
+        font-family: 'TightR', sans-serif;
+        font-size: 1rem;
+        width: 100%;
+        color: white;
+    }
+
+    .buttons{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    .buttons a{
+        padding: 2px 10px;
+        background-color: red;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    .buttons .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        border-radius: 100%;
+        height: 17px;
+        width: 17px;
+    }
+    .finalYanina{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .finalYanina h3{
+        text-align: center;
+        width: 60%;
+        font-family: 'TightEB', sans-serif;
+        font-size: 2rem;
+        color: white;
+        padding-top: 120px;
+        
+
+    }
+    .yaninaImage{
+        background-color: red;
+        background-image: url('../../public/images/GRACIAS2.jpg');
+        width: 60%;
+        height: 600px;
+        background-size: 200%;
+        background-position: center 120px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .yaninaImage h4{
+        font-family: 'TightEB', sans-serif;
+        font-size: 5rem;
+        color: white;
+        margin: 0px;
+    }
+    .finalYanina span{
+        text-align: center;
+        width: 25%;
+        font-family: 'TightR', sans-serif;
+        font-size: 1.1rem;
+        color: white;
+        margin: 0px;
+    }
+</style>
