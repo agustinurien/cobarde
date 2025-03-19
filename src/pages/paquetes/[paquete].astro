@@ -1,0 +1,152 @@
+---
+export async function getStaticPaths() {
+    return [
+        { params: { paquete: "entrada" } },
+        { params: { paquete: "plato_principal" } },
+        { params: { paquete: "postre" } },
+    ];
+}
+
+import entrada from "../../../public/images/EXCUSAS.jpg";
+import platoPrincipal from "../../../public/images/CUANTO.jpg";
+import postre from "../../../public/images/MANIFESTACION.jpg";
+import Layout from "../../layouts/Layout.astro";
+
+const { paquete } = Astro.params;
+
+const datos = {
+    entrada: {
+        src: entrada,
+        titulo: "DEJA ATRAS TUS EXCUSAS",
+        top: "HACETE CARGO DE TU VIDA. DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
+        subtitulo: "ELIMINA ESE GRAN CONEJO BLANCO!",
+        descripcion: "loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit.loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit."
+
+    },
+    plato_principal: {
+        src: platoPrincipal,
+        top: "",
+        titulo: "¿SABES CUÁNTO REALMENTE VALES?",
+        subtitulo: "AUTOESTIMA AUTO COMPRENSION DE UNO MISMO.",
+        descripcion: "loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl"
+    },
+    postre: {
+        src: postre,
+        top: "PROGRAMÁ TU NUEVO SER.",
+        titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
+        subtitulo: "IMAGINACION CREATIVA",
+        descripcion: ""
+    },
+};
+
+// Acceder al objeto con el nombre del paquete
+const plato = datos[paquete]
+---
+<Layout>
+
+    <section>
+        <div class="platoImgContainer">
+            <img src={plato.src.src} alt="">
+            <div class="platoTitle">
+                <span>{plato.top}</span>
+                <h2>{plato.titulo}</h2>
+            </div>
+        </div>
+        <div class="platoDescripcion">
+            <h3>{plato.subtitulo}</h3>
+            <div class="cuadroDescripcion">
+                <h4>PLATO PRINCIPAL</h4>
+            </div>
+            <div class="descripcion">
+                <p>{plato.descripcion}</p>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    section{
+        
+    }
+    .platoImgContainer{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+    }
+    .platoImgContainer img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .platoTitle{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        color: white;
+    }
+    .platoTitle span{
+        margin: 0px;
+        margin-bottom: 30px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 1.5rem;
+    }
+    .platoTitle h2{
+        width: 55%;
+        margin: 0px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .platoDescripcion{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .platoDescripcion h3{
+        margin-top: 50px;
+        margin-bottom: 70px;
+        color: rgb(255, 255, 255);
+        font-family: 'TightR', sans-serif;
+    }
+    .cuadroDescripcion{
+        color: white;
+        width: 50%;
+        border: 1px solid white;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        
+    }
+    .cuadroDescripcion h4{
+        margin: 0px;
+        padding: 20px;
+        border-bottom: 1px solid white;
+        font-family: 'TightEB', sans-serif;
+    }
+    .descripcion{
+        width: 50%;  /* Ancho total del contenedor */
+        height: 400px;  /* Altura fija */
+        overflow: hidden;  /* El contenido que exceda el height no se muestra */
+        border: 1px solid #ccc;
+        border-top: none;
+        color: white;
+        background-color: rgb(6, 47, 47);
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        
+    }
+    .descripcion p{
+        
+        margin: 0px;
+        width: 50%;
+    }
+
+</style>

@@ -1,13 +1,22 @@
+---
+import { BiLogOut } from "react-icons/bi";
+import logo from "../../../public/images/4.png"
+import { MdArrowOutward } from "react-icons/md";
+---
+
 <nav>
-    <div>
-        <img src="" alt="">
+    <div class="logoContainer">
+        <img src={logo.src} alt="" class="logo">
     </div>
     <ul>
         <li><a href="/">YANINA POLO</a></li>
-        <li><a href="/">EMAIL</a></li>
+        <li><a href="/">PAQUETES</a></li>
+        <li><a href="/">EMAILS</a></li>
         <li>
-            <a href="/">INICIAR SESION</a>
-            <a href="">go</a>
+            <div class="buttons">
+                <a href="">INICIAR SESION</a>
+                <a href="" class="arrow"><MdArrowOutward/></a>
+            </div>
         </li>
     </ul>
 </nav>
@@ -16,27 +25,61 @@
     nav {
         display: flex;
         justify-content: space-between;
-        background-color: #333;
+        background-image: linear-gradient(to right,  black 10%, #161616);
         height: 80px;
     }
-    div{
-        background-color: red;
+    .logoContainer{
+        margin-left: 5%;
+        
         height: 100%;
         width: 200px;
+    }
+    .logo{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
         list-style: none;
         margin: 0px;
         padding: 0px;
-    }
-
-    li {
+        margin-right: 5%;
     }
 
     a {
         text-decoration: none;
         color: #ffffff;
+        font-family: 'TightSB', sans-serif;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+        padding-top: 10px;
+    }
+    .buttons a{
+        padding: 7px 15px;
+        background-color: rgb(255, 0, 0);
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        font-family: 'TightEB', sans-serif;
+        font-size: 0.8rem;
+    }
+    .buttons .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        border-radius: 100%;
+        height: 25px;
+        width: 25px;
+
     }
 </style>

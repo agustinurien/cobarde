@@ -8,7 +8,9 @@ import { MdArrowOutward } from "react-icons/md";
 
 <section>
     <div class="paquetesContainer">
-        <h2 class="subtituloProposito">¿Cómo comparto mi propósito?</h2>
+        <h2 class="subtituloProposito">¿Cómo comparto <span style="color: red;">
+            mi propósito?
+            </span></h2>
         <h4 class="sloganProposito">A través de charlas, encuentros virtuales o presenciales y conferencias,
             comparto mi mensaje en distintos espacios y con diversos grupos.</h4>
         <div class="paquetes">
@@ -26,8 +28,8 @@ import { MdArrowOutward } from "react-icons/md";
                     <img src={entrada.src} alt="">
                 </div>
                 <div class="buttons">
-                    <a href="">MAS INFO</a>
-                    <a href="" class="arrow"><MdArrowOutward/></a>
+                    <a href="/paquetes/entrada">MAS INFO</a>
+                    <a href="/paquetes/entrada" class="arrow"><MdArrowOutward/></a>
                 </div>
             </div>
 
@@ -51,8 +53,8 @@ import { MdArrowOutward } from "react-icons/md";
                         <img src={platoP.src} alt="">
                     </div>
                     <div class="buttons">
-                        <a href="">MAS INFO</a>
-                        <a href="" class="arrow"><MdArrowOutward/></a>
+                        <a href="/paquetes/plato_principal">MAS INFO</a>
+                        <a href="/paquetes/plato_principal" class="arrow"><MdArrowOutward/></a>
                     </div>
             </div>
 
@@ -74,8 +76,8 @@ import { MdArrowOutward } from "react-icons/md";
                     <img src={postre.src} alt="">
                 </div>
                 <div class="buttons">
-                    <a href="">MAS INFO</a>
-                    <a href="" class="arrow"><MdArrowOutward/></a>
+                    <a href="/paquetes/postre">MAS INFO</a>
+                    <a href="/paquetes/postre" class="arrow"><MdArrowOutward/></a>
                 </div>
             </div>
         </div>
@@ -114,7 +116,7 @@ crecimiento personal dentro del
 ámbito laboral.
                         </p>
                         <div class="buttons">
-                            <a href="">MAS INFO</a>
+                            <a href=>MAS INFO</a>
                             <a href="" class="arrow"><MdArrowOutward/></a>
                         </div>
                     </div>
@@ -122,10 +124,10 @@ crecimiento personal dentro del
 
             <div class="slogan">
                 <p>
-                    Lo que haces te convierte en héroe.
+                    Lo que haces te convierte en <span style="color: red;">héroe</span>.
                     <br>
                     
-                    Lo que no haces te convierte en cobarde.
+                    Lo que no haces te convierte en <span style="color: red;">cobarde</span>.
                 </p>
                     
             </div>
@@ -218,7 +220,7 @@ crecimiento personal dentro del
     }
     .platoImgContainer{
         height: 150px;
-        
+        overflow: hidden;
     }
     .platoImgContainer img{
         width: 100%;

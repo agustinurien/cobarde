@@ -1,3 +1,7 @@
+---
+import Contacto from "../Contacto";
+---
+
 <section>
     <div class="contacto">
         <p class="contactoText">
@@ -5,11 +9,11 @@
 los que te
 recuerdo que
 dejes de ser
-cobarde.
+<span style="color: red;">
+cobarde
+</span>.
         </p>
-        <div class="contactoForm">
-            contacto
-        </div>
+        <Contacto client:load/>
     </div>
     <div class="logoContainer">
         <img src="../../../public/images/2.jpg" alt="">
@@ -35,24 +39,18 @@ cobarde.
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        background-color: red;
         height: fit-content;
         width: 50%;
     }
     .contactoText{
         font-family: 'TightEB', sans-serif;
-        font-size: 2.5rem;
+        font-size: 2.6rem;
         width: 35%;
         padding: 0px;
         padding-left: 20px;
         margin: 0px;
     }
-    .contactoForm{
-        background-color: grey;
-        width: 56%;
-        height: 300px;
-        border-radius: 25px;
-    }
+    
     .logoContainer{
         height: 500px;
         width: 500px;
