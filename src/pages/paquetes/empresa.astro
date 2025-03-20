@@ -1,0 +1,270 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { MdArrowOutward } from "react-icons/md";
+import empresa from "../../../public/images/empresa.jpg";
+---
+
+<Layout>
+
+    <section >
+        <div class="platoImgContainer">
+            <img src={empresa.src} alt="">
+            <div class="platoTitle">
+                <h2>VOY A TU EMPRESA</h2>
+            </div>
+        </div>
+        <div class="platoDescripcion">
+            <h3 class="subtitulo">
+                RESTAURANTES, OFICINAS, CUALQUIER
+                TIPO DE DESARROLLO LABORAL.
+            </h3>
+            <div class="cuadroDescripcion">
+                <h4>
+                    CHARLAS A EMPRESAS
+                </h4>
+                
+            </div>
+            
+            <div class={"descripcion"}>
+                <p>Mi objetivo es que, con mis charlas, tus
+                    empleados encuentren inspiración,
+                    eleven su crecimiento y descubran su
+                    motor interno, generando entusiasmo
+                    día a día en las tareas que realizan en su
+                    trabajo.
+                    Que puedan encontrar aprendizaje
+                    dentro del rol que desempeñan y, de
+                    esa forma, desarrollen su máximo
+                    crecimiento personal, reflejando ese
+                    mismo progreso en tu empresa.</p>
+            </div>
+            
+            
+            <div class="cuadroBienes">
+                <h4>¿QUÉ BIENES GENERA?</h4>
+                <div class="bienesDescripcion">
+                    <p class="text">Este es el terreno en el que hoy me muevo con total seguridad. Arranqué como Broker, fui
+                        creciendo hasta llegar a chief, y en el camino descubrí cómo avanzar en el inmobiliario y mejorar mis ingresos. Acá te voy a mostrar cómo vos también podés hacerlo.s</p>
+                        <div class="division">
+                            <div class="broker">
+                                <span>Convertite en el Broker
+                                    inmobiliario Elite</span>
+                                    <p>Dominá el arte de la venta y
+                                        multiplicá tus ingresos, disfrutando
+                                        de cada experiencia y adquiriendo
+                                        de ellas el mayor aprendizaje.
+                                        Enfrentamos cada desafío
+                                        convirtiéndolo en oportunidades
+                                        con formulas probadas en el
+                                        mercado, técnicas de venta y
+                                        entrenamiento personalizado para
+                                        perfeccionar tu habilidades en la
+                                        negociación.</p>
+                                    </div>
+                                    <div class="manos">
+                                        <span>Dejá todo en
+                                            mis manos</span>
+                                            <p>Soy una apasionada del sector
+                                                inmobiliario. Me involucro al 100%
+                                                en cada proyecto, buscando constantemente nuevos desafíos
+                                                y oportunidades para crecer
+                                                profesionalmente. Estoy convencida de que puedo ser un
+                                                activo valioso para tu empresa.</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <a href=>AGENDA UNA REUNION CONMIGO</a>
+                                    <a href="" class="arrow"><MdArrowOutward/></a>
+                                </div>
+        
+        </div>
+        
+    </section>
+</Layout>
+
+<style>
+    section{
+        
+    }
+    .platoImgContainer{
+        position: relative;
+        width: 100%;
+        height: 70vh;
+    }
+    .platoImgContainer img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .platoTitle{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        color: white;
+    }
+    .platoTitle span{
+        margin: 0px;
+        margin-bottom: 30px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 1.5rem;
+    }
+    .entrada .platoTitle h2{
+        width: 70%;
+        margin: 0px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .platoTitle h2{
+        width: 55%;
+        margin: 0px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+}
+    
+    .platoDescripcion{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .platoDescripcion .subtitulo{
+        text-align: center;
+        width: 23%;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        color: rgb(255, 255, 255);
+        font-family: 'TightR', sans-serif;
+        font-weight: 400;
+    }
+    .cuadroBienes{
+        border: 1px solid red;
+        color: white;
+        width: 40%;
+        margin-top: 50px;
+        border-radius: 25px;
+        box-sizing: border-box;
+    }
+    .cuadroBienes h4{
+        padding: 20px;
+        margin: 0px;
+        ;
+    }
+    .bienesDescripcion{
+    }
+    .bienesDescripcion .text{
+        padding: 20px;
+        margin: 0px;
+    }
+    .division{
+        display: flex;
+        width: 100%;
+    }
+    .division .broker{
+        padding-top: 20px;
+        
+        width: 50%;
+    }
+    .division .broker span{
+        padding-left: 20px;
+    }
+    .division .broker p{
+        margin: 0px;
+        padding: 20px;
+    }
+    .division .manos{
+        padding-top: 20px;
+        
+        width: 50%;
+        
+    }
+    .division .manos span{
+        padding-left: 20px;
+    }
+    .division .manos p{
+        margin: 0px;
+        padding: 20px;
+    }
+    .cuadroDescripcion{
+        color: white;
+        width: 40%;
+        border: 2px solid white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+
+    }
+    .cuadroDescripcion span{
+        font-family: 'TightR', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 100;
+        font-style: italic;
+    }
+    .cuadroDescripcion h4{
+        margin: 0px;
+        padding-top: 20px;
+        font-family: 'TightEB', sans-serif;
+    }
+    .descripcion{
+        width: 40%;  /* Ancho total del contenedor */
+        height: fit-content; 
+        overflow: hidden;  /* El contenido que exceda el height no se muestra */
+        border: 2px solid #ccc;
+        border-top: none;
+        color: white;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .descripcion p{
+        font-family: 'TightR', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 100;
+        column-count: 2;
+        margin: 0px;
+    }
+    
+    .buttons{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+        padding-top: 10px;
+    }
+    .buttons a{
+        padding: 6px 14px;
+        background-color: red;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        font-family: 'TightEB', sans-serif;
+        font-weight: 800;
+        font-size: 0.8rem;
+    }
+    .buttons .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+        
+    }
+    
+</style>

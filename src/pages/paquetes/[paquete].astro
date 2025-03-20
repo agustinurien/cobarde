@@ -11,6 +11,7 @@ import entrada from "../../../public/images/EXCUSAS.jpg";
 import platoPrincipal from "../../../public/images/CUANTO.jpg";
 import postre from "../../../public/images/MANIFESTACION.jpg";
 import Layout from "../../layouts/Layout.astro";
+import { MdArrowOutward } from "react-icons/md";
 
 const { paquete } = Astro.params;
 
@@ -19,7 +20,8 @@ const datos = {
         src: entrada,
         titulo: "DEJA ATRAS TUS EXCUSAS",
         top: "HACETE CARGO DE TU VIDA. DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
-        subtitulo: "ELIMINA ESE GRAN CONEJO BLANCO!",
+        subtitulo: "!ELIMINA ESE GRAN CONEJO BLANCO!",
+        descripcionTitulo: "ENTRADA",
         descripcion: "loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit.loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit."
 
     },
@@ -28,6 +30,7 @@ const datos = {
         top: "",
         titulo: "¿SABES CUÁNTO REALMENTE VALES?",
         subtitulo: "AUTOESTIMA AUTO COMPRENSION DE UNO MISMO.",
+        descripcionTitulo: "PLATO PRINCIPAL",
         descripcion: "loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl"
     },
     postre: {
@@ -35,7 +38,8 @@ const datos = {
         top: "PROGRAMÁ TU NUEVO SER.",
         titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
         subtitulo: "IMAGINACION CREATIVA",
-        descripcion: ""
+        descripcionTitulo: "POSTRE",
+        descripcion: "oremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit.loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit."
     },
 };
 
@@ -44,7 +48,7 @@ const plato = datos[paquete]
 ---
 <Layout>
 
-    <section>
+    <section class={paquete}>
         <div class="platoImgContainer">
             <img src={plato.src.src} alt="">
             <div class="platoTitle">
@@ -53,21 +57,38 @@ const plato = datos[paquete]
             </div>
         </div>
         <div class="platoDescripcion">
-            <h3>{plato.subtitulo}</h3>
+            <h3 class="subtitulo">{plato.subtitulo}</h3>
             <div class="cuadroDescripcion">
-                <h4>PLATO PRINCIPAL</h4>
+                <h4>{plato.descripcionTitulo}</h4>
+                {paquete === "entrada" && <span>La vida será lo que tú hagas de ella. – S.S.</span>}
             </div>
-            <div class="descripcion">
+            
+            <div class={"descripcion"}>
                 <p>{plato.descripcion}</p>
             </div>
+            <div class="buttons">
+                <a href=>AGENDA UNA REUNION CONMIGO</a>
+                <a href="" class="arrow"><MdArrowOutward/></a>
+            </div>
+            {
+                paquete === "entrada" && (
+                    <div class="canabis">
+                        <h4>CANNABIS</h4>
+                        <p>En estas charlas te hablo de ser consciente de la hierba que
+                        estás consumiendo, sus beneficios y sus contras, cómo
+                        consumirla dosificadamente o dejar de consumirla. Es un paso
+                        hacia el conocimiento de los efectos que causa en nosotros y la
+                        posibilidad de elegir en base a ello.</p>
+                    </div>
+                )
+            }
         </div>
+        
     </section>
 </Layout>
 
 <style>
-    section{
-        
-    }
+    
     .platoImgContainer{
         position: relative;
         width: 100%;
@@ -84,7 +105,6 @@ const plato = datos[paquete]
         bottom: 0;
         left: 0;
         width: 100%;
-        
         display: flex;
         flex-direction: column;
         
@@ -97,13 +117,21 @@ const plato = datos[paquete]
         font-family: 'TightEB', sans-serif;
         font-size: 1.5rem;
     }
+    .entrada .platoTitle h2{
+        width: 70%;
+        margin: 0px;
+        font-family: 'TightEB', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+    }
     .platoTitle h2{
         width: 55%;
         margin: 0px;
         font-family: 'TightEB', sans-serif;
         font-size: 5rem;
         text-align: center;
-    }
+}
+    
     .platoDescripcion{
         
         display: flex;
@@ -111,42 +139,110 @@ const plato = datos[paquete]
         align-items: center;
         flex-direction: column;
     }
-    .platoDescripcion h3{
+    .platoDescripcion .subtitulo{
         margin-top: 50px;
         margin-bottom: 70px;
         color: rgb(255, 255, 255);
         font-family: 'TightR', sans-serif;
+        font-weight: 400;
     }
     .cuadroDescripcion{
         color: white;
         width: 50%;
-        border: 1px solid white;
+        border: 2px solid white;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
-        
+        padding-left: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+
+    }
+    .cuadroDescripcion span{
+        font-family: 'TightR', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 100;
+        font-style: italic;
     }
     .cuadroDescripcion h4{
         margin: 0px;
-        padding: 20px;
-        border-bottom: 1px solid white;
+        padding-top: 20px;
+        padding-bottom: 5px;
         font-family: 'TightEB', sans-serif;
     }
     .descripcion{
         width: 50%;  /* Ancho total del contenedor */
-        height: 400px;  /* Altura fija */
+        height: fit-content; 
         overflow: hidden;  /* El contenido que exceda el height no se muestra */
-        border: 1px solid #ccc;
+        border: 2px solid #ccc;
         border-top: none;
         color: white;
-        background-color: rgb(6, 47, 47);
         border-bottom-left-radius: 35px;
         border-bottom-right-radius: 35px;
-        
+        padding: 20px;
+        box-sizing: border-box;
     }
-    .descripcion p{
-        
+    .entrada .descripcion p{
+        column-count: 3;
         margin: 0px;
-        width: 50%;
+        font-family: 'TightR', sans-serif;
     }
-
+    .plato_principal .descripcion p{
+        column-count: 3;
+        margin: 0px;
+        font-family: 'TightR', sans-serif;
+    }
+    .postre .descripcion p{
+        column-count: 2;
+        margin: 0px;
+        font-family: 'TightR', sans-serif;
+    }
+    
+    .buttons{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0px;
+        padding-top: 10px;
+    }
+    .buttons a{
+        padding: 6px 14px;
+        background-color: red;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        font-family: 'TightEB', sans-serif;
+        font-weight: 800;
+        font-size: 0.8rem;
+    }
+    .buttons .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+        
+    }
+    
+.entrada .canabis{
+    margin-top: 30px;
+    width: 30%;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 2px solid red;
+}
+.entrada .canabis h4{
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-family: 'TightEB', sans-serif;
+}
+.entrada .canabis p{
+    width: 85%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-family: 'TightR', sans-serif;
+}
 </style>
