@@ -19,21 +19,28 @@ import renova from "../../../public/images/renova.jpg";
         <div class="platoDescripcion">
             <h3 class="subtitulo">RENOVÁ TU CONCEPTO PROPIO.</h3>
             <div class="cuadroDescripcion">
-                <h4>sobremesa</h4>
+                <h4>SOBREMESA</h4>
             </div>
             
             <div class="descripcion">
-                <p>Te transmito a mi manera y desde mi
+                <p class="descripcionText">Te transmito a mi manera y desde mi
                     propia experiencia lo que te lleve a
                     inspirarte al cambio y que así puedas
                     adquirir este conocimiento como un
-                    Estilo de vida. Creado desde mi aprendizaje, de manera que aplicando los tres platos,
+                    Estilo de vida. <br> <br>Creado desde mi aprendizaje, de manera que aplicando los tres platos,
                     tomes el timón de tu vida, puedas
-                    encontrar tu lobo, aprendas a domarlo y hacerlo arder. <br> Transmito la verdad, desde mi vision al mundo, con total sinceridad. Eso es lo que más me representa,
+                    encontrar tu lobo, aprendas a domarlo y hacerlo arder. <br> Transmito la verdad, desde mi vision al mundo, con total sinceridad. <br>Eso es lo que más me representa,
                     ponemos sobre la mesa cada
                     ingrediente que ya no está en
                     condiciones, y luego de reconocerlo, lo
                     sustituimos por uno fresco y nutritivo.</p>
+            </div>
+            <div class="descripcion2">
+                <p class="descripcion2Text">Hacete socio por 3 meses y obtené
+                    una actualización de vos mismo,
+                    haciéndote un seguimiento perso-
+                    nalizado sobre tu trabajo personal,
+                    para lograr el cambio deseado.</p>
             </div>
             <div class="buttons">
                 <a href=>AGENDA UNA REUNION CONMIGO</a>
@@ -76,6 +83,7 @@ import renova from "../../../public/images/renova.jpg";
         font-family: 'TightEB', sans-serif;
         font-size: 5rem;
         text-align: center;
+        line-height: 0.95;
     }
     .subtitulo{
         font-family: 'TightEB', sans-serif;
@@ -91,31 +99,70 @@ import renova from "../../../public/images/renova.jpg";
         justify-content: center;
         width: 100%;
         color: white;
+        margin-top: 60px;
     }
     .cuadroDescripcion h4{
+        
         width: 55%;
-        border: 1px solid white;
+        margin: 0px;
+        padding: 10px;
+        padding-left: 20px;
+        border: 2px solid white;
+        border-bottom: 0px;
         display: flex;
-        justify-content: center;
+        font-family: 'TightB', sans-serif;
         color: white;
+        box-sizing: border-box;
+
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
     }
     .descripcion{
         width: 100%;
-        background-color: red;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .descripcion p{
-        
+    .descripcion .descripcionText{
+        column-count: 3;
+        padding: 20px;
         font-family: 'TightR', sans-serif;
         margin: 0px;
         padding-top: 20px;
-        line-height: 1.5;
+        line-height: 1.1;
         padding-bottom: 50px;
-        text-align: center;
+        font-size: 1.1rem;
+        
         color: white;
         width: 55%;
-        border: 1px solid white;
+        border: 2px solid white;
+        box-sizing: border-box;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .descripcion2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
+    .descripcion2 .descripcion2Text{
+        padding: 20px;
+        border-radius: 25px;
+        font-family: 'TightR', sans-serif;
+        margin: 0px;
+        background-color: red;
+        color: white;
+        width: 16%;
+        box-sizing: border-box;
+        font-family: 'TightB', sans-serif;
+        font-size: 1rem;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
     }
 </style>
