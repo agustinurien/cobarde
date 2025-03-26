@@ -13,6 +13,7 @@ import { MdArrowOutward } from "react-icons/md";
             </span></h2>
         <h4 class="sloganProposito">A través de charlas, encuentros virtuales o presenciales y conferencias,
             comparto mi mensaje en distintos espacios y con diversos grupos.</h4>
+
         <div class="paquetes">
 
             <div class="paquete">
@@ -146,8 +147,7 @@ crecimiento personal dentro del
         scroll-margin-top: 80px;
     }
     .paquetesContainer{
-        
-        width: 50%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -220,28 +220,31 @@ crecimiento personal dentro del
         width: 90%;
     }
     .platoImgContainer{
+        position: relative;
         height: 150px;
         overflow: hidden;
+
     }
     .platoImgContainer img{
         width: 100%;
         object-fit: cover;
         scale: 1.5;
-        
+
     }
     .extras{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 80%;
+        width: 720px;
         margin-top: 30px;
+        
     }
     .extras .extra{
         padding: 0px 30px;
         padding-bottom: 5px;
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: 220px;
         border: 1px solid white;
         border-radius: 25px;
     }
@@ -335,5 +338,102 @@ crecimiento personal dentro del
         height: 17px;
         width: 17px;
 
+    }
+    @media  screen and (max-width: 1024px){
+        .paquetesContainer{
+            width: 90%;
+        }
+        .paquetes{
+            height: fit-content;
+            gap: 20px;
+        }
+        .paquetes .paquete{
+            width: 100%;
+            height: 100%;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+        .platoImgContainer{
+
+            height: 220px;
+        }
+        .paquetes .paquete .textoPaquetes{
+            height: fit-content;
+        }
+        
+        .extras{
+            margin-top: 80px;
+            width: 100%;
+            
+        }
+        .extras .extra{
+            height: fit-content;
+            padding: 20px;
+        }
+        .tituloExtra{
+            width: 100%;
+        }
+        .tituloExtra2{
+            width: 80%;
+        }
+        .extras .slogan{
+            height: fit-content;
+            padding: 50px;
+        }
+        .slogan p{
+            font-size: 0.9rem;
+        }
+        
+    }
+    @media  screen and (max-width: 768px){
+        .subtituloProposito{
+            width: 100%;
+            font-size: 1.9rem;
+        }
+        .sloganProposito{
+            width: 90%;
+            font-size: 0.7rem;
+        }
+        .paquetesContainer{
+            width: 90%;
+        }
+        .paquetes{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .paquetes .paquete{
+            width: 100%;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+        .paquetes .paquete .textoPaquetes{
+            height: fit-content;
+        }
+        .platoImgContainer{
+            display: none;
+        }
+        .extras{
+            margin-top: 80px;
+            width: 100%;
+            
+        }
+        .extras .extra{
+            height: fit-content;
+            padding: 20px;
+        }
+        .tituloExtra{
+            width: 100%;
+        }
+        .tituloExtra2{
+            width: 100%;
+        }
+        .extras .slogan{
+            height: fit-content;
+            padding: 50px;
+        }
+        .slogan p{
+            font-size: 0.9rem;
+        }
     }
 </style>

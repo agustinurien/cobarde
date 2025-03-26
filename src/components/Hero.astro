@@ -21,34 +21,44 @@ import { MdArrowOutward } from "react-icons/md";
 </section>
 
 <style>
-    .heroImageContainer{
+    section{
         background-color: black;
-        width: 100%;
-        height: 60vh;
-        overflow: hidden;
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .heroImageContainer{
+
+        width: 90%;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         
     }
     .heroImage{
-        width: 85%;
+        height: 100%;
+        width: 80%;
         object-fit: cover;
         object-position: top;
+
+        
     }
     .titleContainer{
-        background-color: black;
-        height: 230px;
+        height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
     }   
     .title{
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 60%;
     }
     .subtitleContainer{
         background-color: black;
-        height: 100px;
+        width: 100%;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -84,5 +94,65 @@ import { MdArrowOutward } from "react-icons/md";
         height: 17px;
         width: 17px;
 
+    }
+    @media screen and (max-width: 1024px){
+        .heroImageContainer{
+        justify-content: flex-end;
+        
+    }
+    .heroImage{
+        width: 95%;
+    }
+
+    .titleContainer{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+        .title{
+        height: auto;
+        width: 80%;
+    }
+    .subtitleContainer p{
+        text-align: center;
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    }
+    @media  screen and (max-width: 768px){
+        .heroImageContainer{
+        width: 100%;
+        height: 30vh;
+        justify-content: flex-end;
+        
+    }
+    .heroImage{
+        width: 90%;
+
+        
+    }
+        
+        .titleContainer{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+        .title{
+        height: auto;
+        width: 80%;
+    }
+    .subtitleContainer p{
+        text-align: center;
+        width: 40%;
+        font-size: 0.8rem;
+        margin: 0px;
+        
+    }
+    .subtitleContainer{
+        margin-top: 20px;
+        gap: 50px;
+    }
     }
 </style>

@@ -56,3 +56,15 @@
   height: 24px;
   width: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .contactoForm {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contactoForm {
+    margin-top: 40px;
+    width: 80%;
+  }
+}

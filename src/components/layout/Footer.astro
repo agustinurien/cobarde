@@ -41,7 +41,7 @@ cobarde
         justify-content: space-between;
         align-items: flex-start;
         height: fit-content;
-        width: 50%;
+        width: 1000px;
     }
     .contactoText{
         font-family: 'TightEB', sans-serif;
@@ -63,7 +63,7 @@ cobarde
         object-position: center 80px;
     }
     .logoText{
-        background-color: pink;
+
         height: 100px;
         width: 350px;
         overflow: hidden;
@@ -72,7 +72,7 @@ cobarde
         align-items: center;
     }
     .logoText img{
-        background-color: pink;
+
         height: auto;
         width: 100%;
         object-fit: cover;
@@ -83,5 +83,74 @@ cobarde
         font-size: 0.6rem;
         padding-bottom: 80px;
     }
+    @media (max-width: 1024px){
+        .contacto{
+            width: 90%;
+        }
+        .contactoText{
+            font-size: 2rem;
+            width: 40%;
+        }
+        .logoContainer{
+            height: 400px;
+            width: 400px;
+        }
+        .logoText{
+            height: 80px;
+            width: 300px;
+        }
+        p{
+            font-size: 0.5rem;
+            padding-bottom: 60px;
+        }
+    }
+    @media (max-width: 768px){
+        .logoContainer{
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .logoContainer img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        object-position: center 40px;
+    }
+    .logoText{
 
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logoText img{
+
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+        
+    }
+    p{
+        font-size: 0.3rem;
+        padding-bottom: 40px;
+    }
+    
+    }
+    @media  screen and (max-width: 500px){
+        .contacto{
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
+        .contactoText{
+            width: 90%;
+            font-size: 1.5rem;
+            padding: 0px;
+            padding-left: 20px;
+            margin: 0px;
+        }
+    }
 </style>
