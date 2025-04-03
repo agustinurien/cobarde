@@ -2,6 +2,8 @@
 import entrada from '../../public/images/ENTRADA.png'
 import platoP from '../../public/images/PLATOPRINCIPAL.png'
 import postre from '../../public/images/POSTRE.png'
+import fuego from '../../public/images/fuego.jpg'
+import empresa from '../../public/images/empresa.jpg'
 import { MdArrowOutward } from "react-icons/md";
 
 ---
@@ -87,7 +89,7 @@ import { MdArrowOutward } from "react-icons/md";
 
             <div class="extra sobremesa">
                 <div class="imgExtraContainer">
-                    <img src="/images/FUEGO.jpg" alt="fuegoImage">
+                    <img src={fuego.src} alt="fuegoImage">
                 </div>
 
                 <div style={{position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "10px"
@@ -113,7 +115,7 @@ import { MdArrowOutward } from "react-icons/md";
 
             <div class="extra empresa">
                 <div class="imgExtraContainer">
-                    <img src="/images/empresa.jpg" alt="empresaImage" class="empresaImage">
+                    <img src={empresa.src} alt="empresaImage" class="empresaImage">
                 </div>
                 <div style={{position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "10px"
                 }}>
