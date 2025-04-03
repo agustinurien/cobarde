@@ -1,5 +1,5 @@
 ---
-import heroImage from '../../public/images/hero.jpg';
+import heroImage from '../../public/images/hero.png';
 import title from '../../public/images/title.png';
 import { MdArrowOutward } from "react-icons/md";
 ---
@@ -29,19 +29,19 @@ import { MdArrowOutward } from "react-icons/md";
         align-items: flex-end;
     }
     .heroImageContainer{
-
-        width: 90%;
+        width: 100%;
         height: 55vh;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         
     }
     .heroImage{
         height: 100%;
-        width: 80%;
+        width: auto;
         object-fit: cover;
         object-position: top;
+        
 
         
     }
@@ -98,13 +98,11 @@ import { MdArrowOutward } from "react-icons/md";
     }
     @media screen and (max-width: 1024px){
         .heroImageContainer{
-        justify-content: flex-end;
-        
+            height: 50vh;
     }
     .heroImage{
-        width: 95%;
+        width: 90%;
     }
-
     .titleContainer{
         height: fit-content;
         display: flex;
@@ -123,16 +121,13 @@ import { MdArrowOutward } from "react-icons/md";
     }
     @media  screen and (max-width: 768px){
         .heroImageContainer{
-        width: 100%;
-        height: 30vh;
-        justify-content: flex-end;
-        
+            height: 35vh;
     }
     .heroImage{
-        width: 90%;
-
-        
+        width: 100%;
+        height: auto;
     }
+    
         
         .titleContainer{
         height: fit-content;

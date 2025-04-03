@@ -27,8 +27,7 @@ import { MdArrowOutward } from "react-icons/md";
                         decidiendo quien querés ser.</p>
                 </div>
                 <div class="platoImgContainer">
-                    
-                    <img src={entrada.src} alt="">
+                    <img src={entrada.src} alt="entradaPlato" class="platoEImg">
                 </div>
                 <div class="buttons">
                     <a href="/paquetes/entrada">MÁS INFO</a>
@@ -53,7 +52,7 @@ import { MdArrowOutward } from "react-icons/md";
                     </div>
                     <div class="platoImgContainer">
 
-                        <img src={platoP.src} alt="">
+                        <img src={platoP.src} alt="platoPrincipal" class="platoPImg">
                     </div>
                     <div class="buttons">
                         <a href="/paquetes/plato_principal">MÁS INFO</a>
@@ -76,7 +75,7 @@ import { MdArrowOutward } from "react-icons/md";
                             la realidad.</p>
                 </div>
                 <div class="platoImgContainer">
-                    <img src={postre.src} alt="">
+                    <img src={postre.src} alt="postrePlato" class="platoPOImg">
                 </div>
                 <div class="buttons">
                     <a href="/paquetes/postre">MÁS INFO</a>
@@ -237,14 +236,28 @@ import { MdArrowOutward } from "react-icons/md";
     .platoImgContainer{
         position: relative;
         height: 150px;
-        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 20px;
+        
 
     }
     .platoImgContainer img{
         width: 100%;
-        object-fit: cover;
-        scale: 1.5;
+        height: 100%;
+        object-fit: contain;
+        
 
+    }
+    .platoImgContainer .platoEImg{
+        height: 90%;
+    }
+    .platoImgContainer .platoPImg{
+        
+    }
+    .platoImgContainer .platoPOImg{
+        height: 90%;
     }
     .extras{
         display: flex;
@@ -381,6 +394,9 @@ import { MdArrowOutward } from "react-icons/md";
 
     }
     @media  screen and (max-width: 1024px){
+        section{
+            margin-top: 90px;
+        }
         .paquetesContainer{
             width: 90%;
         }
@@ -437,6 +453,7 @@ import { MdArrowOutward } from "react-icons/md";
         }
         .paquetesContainer{
             width: 90%;
+            
         }
         .paquetes{
             display: flex;
@@ -471,7 +488,7 @@ import { MdArrowOutward } from "react-icons/md";
         }
         .extras .slogan{
             height: fit-content;
-            padding: 50px;
+            padding: 30px;
         }
         .slogan p{
             font-size: 0.9rem;
