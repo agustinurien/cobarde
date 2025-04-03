@@ -86,39 +86,53 @@ import { MdArrowOutward } from "react-icons/md";
         <div class="extras">
 
             <div class="extra sobremesa">
-                <span>
-                    SOBREMESA
-                </span>
-                <h4 class="tituloExtra">Renová tu
-                    concepto
-                    propio.</h4>
-                    <div class="textoExtra">
-                        <p>Hacé que tus cambios se conviertan en tu estilo
-                            aplicamos la actualización de uno mismo.
-                            de vida, no en una simple experiencia, para ello
-                        </p>
-                        <div class="buttons">
-                            <a href="/paquetes/renova">MÁS INFO</a>
-                            <a href="/paquetes/renova" class="arrow"><MdArrowOutward/></a>
+                <div class="imgExtraContainer">
+                    <img src="../../public/images/FUEGO.jpg" alt="fuegoImage">
+                </div>
+
+                <div style={{position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "10px"
+                }}>
+                    <span>
+                        SOBREMESA
+                    </span>
+                    <h4 class="tituloExtra">Renová tu
+                        concepto
+                        propio.</h4>
+                        <div class="textoExtra">
+                            <p>Hacé que tus cambios se conviertan en tu estilo
+                                aplicamos la actualización de uno mismo.
+                                de vida, no en una simple experiencia, para ello
+                            </p>
+                            <div class="buttons">
+                                <a href="/paquetes/renova">MÁS INFO</a>
+                                <a href="/paquetes/renova" class="arrow"><MdArrowOutward/></a>
+                            </div>
                         </div>
-                    </div>
+                </div>
             </div>
 
             <div class="extra empresa">
-                <span>
-                    CHARLAS A EMPRESAS
-                </span>
-                <h4 class="tituloExtra2">¿Querés que tus empleados
-                    sean felices trabajando en tu
-                    empresa?</h4>
-                    <div class="textoExtra">
-                        <p>Charlas que inspiran al
-crecimiento personal dentro del
-ámbito laboral.
-                        </p>
-                        <div class="buttons">
-                            <a href="/paquetes/empresa">MÁS INFO</a>
-                            <a href="/paquetes/empresa" class="arrow"><MdArrowOutward/></a>
+                <div class="imgExtraContainer">
+                    <img src="../../public/images/empresa.jpg" alt="empresaImage" class="empresaImage">
+                </div>
+                <div style={{position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", gap: "10px"
+                }}>
+
+                    <span>
+                        CHARLAS A EMPRESAS
+                    </span>
+                    <h4 class="tituloExtra2">¿Querés que tus empleados
+                        sean felices trabajando en tu
+                        empresa?</h4>
+                        <div class="textoExtra">
+                            <p>Charlas que inspiran al
+                                crecimiento personal dentro del
+                                ámbito laboral.
+                            </p>
+                            <div class="buttons">
+                                <a href="/paquetes/empresa">MÁS INFO</a>
+                                <a href="/paquetes/empresa" class="arrow"><MdArrowOutward/></a>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -178,7 +192,6 @@ crecimiento personal dentro del
         padding-top: 40px;
     }
     .paquetes .paquete{
-        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -245,25 +258,47 @@ crecimiento personal dentro del
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
         height: 220px;
-        border: 1px solid white;
+        border: 1px solid rgb(255, 255, 255);
         border-radius: 25px;
     }
 
     .sobremesa{
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.718) 5%, rgba(0, 0, 0, 0)), 
-        url('../../public/images/FUEGO.jpg');
-        background-size: cover;
-        background-position: center;
-        
+        position: relative;
     }
     .empresa{
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.874) 5%, rgba(0, 0, 0, 0)), 
-        url('../../public/images/empresa.jpg');
-        background-size: cover;
-        background-position: center;
+        position: relative;
     }
+
+    .imgExtraContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        
+    }
+    .imgExtraContainer img{
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .imgExtraContainer .empresaImage{
+        transform: scaleX(-1);
+    }
+
+    .imgExtraContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.791));
+}
     
     .extras .extra span{
         padding-top: 15px;
