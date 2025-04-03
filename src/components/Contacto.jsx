@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 const Contacto = () => {
   return (
     <form className="contactoForm">
-      <div class="inputs">
+      <div className="inputs">
         <h3>
           Escribí tus datos y no seas{" "}
           <span style={{ color: "red" }}>cobarde</span>.
@@ -13,9 +13,9 @@ const Contacto = () => {
         <input type="text" placeholder="Nombre" />
         <input type="email" placeholder="Email" />
       </div>
-      <div class="buttons">
+      <div className="buttons">
         <a href="">RECIBIR EMAILS</a>
-        <a href="" class="arrow">
+        <a href="" className="arrow">
           <MdArrowOutward />
         </a>
       </div>
