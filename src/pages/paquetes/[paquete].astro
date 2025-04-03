@@ -22,8 +22,9 @@ const datos = {
         top: "HACETE CARGO DE TU VIDA. DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
         subtitulo: "!ELIMINA ESE GRAN CONEJO BLANCO!",
         descripcionTitulo: "ENTRADA",
-        descripcion: "Lo primero que debemos reconocer es lo que nos está atascando. Para eso, debemos hacernos una gran pregunta: ~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es? ¡YA ES HORA DE QUE LO RECONOZCAS! Una vez que lo sepamos, podremos dar ese doble salto hacia el jardín de la madurez. Ahí entenderás que todo es nuestra responsabilidad. Hacernos cargo de nuestra vida significa eliminar las emociones negativas, decidir quién queremos ser y poner nuestra fe únicamente en nosotros mismos para lograr nuestros propósitos. Las personas más felices son las que tienen control de sí mismas y son libres. NO TE DAS UNA IDEA DE LO BIEN QUE SE SIENTE."
-
+        descripcion3: "Lo opuesto a la responsabilidad es la culpa. Para eliminar las emociones negativas, debemos asumir que no existe culpa, sino situaciones llenas de responsabilidades y desafíos.\n\n ¿Sos un lanzador o un receptor de culpas? \n\n El perdón es libertad y paz mental… Eso es lo que obtenés.",
+        descripcion2: "Una vez que lo sepamos, podremos dar ese doble salto hacia el jardín de la madurez. Ahí entenderás que todo es nuestra responsabilidad.\n\n Hacernos cargo de nuestra vida significa eliminar las emociones negativas, decidir quién queremos ser y poner nuestra fe únicamente en nosotros mismos para lograr nuestros propósitos. Las personas más felices son las que tienen control de sí mismas y son libres.\n\n NO TE DAS UNA IDEA DE LO BIEN QUE SE SIENTE.",
+        descripcion: "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
     },
     plato_principal: {
         src: platoPrincipal,
@@ -31,7 +32,9 @@ const datos = {
         titulo: "¿SABES CUÁNTO REALMENTE VALES?",
         subtitulo: "AUTOESTIMA AUTO COMPRENSION DE UNO MISMO.",
         descripcionTitulo: "PLATO PRINCIPAL",
-        descripcion: "loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non leo. Nam ultricies nunc et lectus semper eleifend. Donec pharetra et nunc ac posuere. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl. Sed sit amet lacus auctor, sagittis turpis ut, tincidunt nisl"
+        descripcion:"Preguntarte cuánto valés es comenzar entender lo que es realmente amarte.\n Cuando te querés de verdad, elegís escuchas tu voz interna y reconocé con claridad a esas personas que también se valoran como vos. Así transformás el verdadero valor de todo, tanto en lo emocional como en lo material.",
+        descripcion2:"Saber cuánto vale tu tiempo es una forma de amarte, Lo mismo pasa con tu dedicación y tu esfuerzo en el trabajo y cada situación en la que te expongas y des esa parte de vos, por eso reconocer tu valor y poner limites, es amarte.\n\nte pregunto: ¿Cuánto vale tu vida? ¿Y cuánto valés vos en el mundo?",
+        descripcion3: "Esto hay que aplicarlo en todos los ámbitos que quieras, pero lo más importante es entender, desde la raíz, cómo cambia todo cuando empezás a verte de otra manera. Eso es lo que realmente construye relaciones sanas simples y poderosas."
     },
     postre: {
         src: postre,
@@ -39,7 +42,8 @@ const datos = {
         titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
         subtitulo: "IMAGINACION CREATIVA",
         descripcionTitulo: "POSTRE",
-        descripcion: "oremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit. loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit.loremp ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit."
+        descripcion: "¿Estás listo para saber qué es lo que realmente querés para tu vida y dispuesto a persistir hasta que eso suceda? Te mostraré la forma más clara y simple de hacerlo. Luego, aprenderás a ver lo que deseás de manera clara y a imprimir esa idea, asumiendo el papel.",
+        descripcion2: "Por último, los decretos son fundamentales, ya que describen lo que deseás, ayudándote a fortalecer la creencia en vos mismo de forma sencilla. A su vez, fortalecen tu vida, generando emociones positivas."
     },
 };
 
@@ -64,7 +68,14 @@ const plato = datos[paquete]
             </div>
             
             <div class={"descripcion"}>
-                <p>{plato.descripcion}</p>
+                <p set:html={plato.descripcion.replace(/\n/g, "<br>")}>{plato.descripcion}</p>
+                <p set:html={plato.descripcion2.replace(/\n/g, "<br>")}>{plato.descripcion2}</p>
+                {
+                    plato.descripcion3 && (
+                        <p set:html={plato.descripcion3.replace(/\n/g, "<br>")}>{plato.descripcion3}</p>
+                    )
+                }
+                
             </div>
             <div class="buttons">
                 <a href=>AGENDA UNA REUNION CONMIGO</a>
@@ -118,11 +129,11 @@ const plato = datos[paquete]
         font-size: 1.5rem;
     }
     .entrada .platoTitle h2{
-        width: 70%;
+        width: 80%;
         margin: 0px;
         font-family: 'TightBlack', sans-serif;
         font-weight: 900;
-        font-size: 5rem;
+        font-size: 5.2rem;
         text-align: center;
     }
     .platoTitle h2{
@@ -150,11 +161,11 @@ const plato = datos[paquete]
     }
     .cuadroDescripcion{
         color: white;
-        width: 50%;
+        width: 1000px;
         border: 2px solid white;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
-        padding-left: 20px;
+        padding-left: 40px;
         padding-bottom: 20px;
         box-sizing: border-box;
 
@@ -172,31 +183,37 @@ const plato = datos[paquete]
         font-family: 'TightEB', sans-serif;
     }
     .descripcion{
-        width: 50%;  /* Ancho total del contenedor */
-        height: fit-content; 
-        overflow: hidden;  /* El contenido que exceda el height no se muestra */
+        display: flex;
+        gap: 40px;
+        height: fit-content;
+        overflow: hidden;  
         border: 2px solid #ccc;
         border-top: none;
         color: white;
         border-bottom-left-radius: 35px;
         border-bottom-right-radius: 35px;
-        padding: 20px;
+        padding: 20px 40px 40px 40px;
         box-sizing: border-box;
+        width: 1000px;
     }
     .entrada .descripcion p{
-        column-count: 3;
         margin: 0px;
         font-family: 'TightR', sans-serif;
+        
     }
     .plato_principal .descripcion p{
-        column-count: 3;
         margin: 0px;
         font-family: 'TightR', sans-serif;
     }
     .postre .descripcion p{
-        column-count: 2;
         margin: 0px;
         font-family: 'TightR', sans-serif;
+    }
+    .postre .descripcion{
+        width: 700px;
+    }
+    .postre .cuadroDescripcion{
+        width: 700px;
     }
     
     .buttons{
@@ -266,6 +283,7 @@ const plato = datos[paquete]
     }
     .descripcion{
         width: 80%;
+        flex-direction: column;
     }
     .entrada .canabis{
         width: 70%;
@@ -290,6 +308,12 @@ const plato = datos[paquete]
     }
     .postre .subtitulo{
         font-size: 0.8rem;
+    }
+    .postre .descripcion{
+        width: 70%;
+    }
+    .postre .cuadroDescripcion{
+        width: 70%;
     }
 }
 @media  screen and (max-width: 768px){
