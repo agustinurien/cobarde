@@ -15,7 +15,42 @@ import Yanina from '../components/Yanina.astro';
 </Layout>
 
 <style is:global>
+	@font-face {
+		font-family: 'TightELI';
+		src: url('/public/fuentes/InterTight-ExtraLightItalic.ttf') format('truetype');
+		font-weight: 100;
+		font-style: italic;
+		font-display: swap;
+	}
 	
+	@font-face {
+		font-family: 'TightTI';
+		src: url('/public/fuentes/InterTight-ThinItalic.ttf') format('truetype');
+		font-weight: 100;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'TightL';
+		src: url('/public/fuentes/InterTight-Light.ttf') format('truetype');
+		font-weight: 200;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'TightR';
+		src: url('/public/fuentes/InterTight-Regular.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'TightB';
+		src: url('/public/fuentes/InterTight-Bold.ttf') format('truetype');
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
 	@font-face {
 		font-family: 'TightSB';
 		src: url('/public/fuentes/InterTight-SemiBold.ttf') format('truetype');
@@ -24,23 +59,9 @@ import Yanina from '../components/Yanina.astro';
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'TightTI';
-		src: url('/public/fuentes/InterTight-ThinItalic.ttf') format('truetype');
-		font-weight: 600;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
 		font-family: 'TightEB';
 		src: url('/public/fuentes/InterTight-ExtraBold.ttf') format('truetype');
 		font-weight: 800;
-		font-style: normal;
-		font-display: swap;
-}
-	@font-face {
-		font-family: 'TightR';
-		src: url('/public/fuentes/InterTight-Regular.ttf') format('truetype');
-		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
 }

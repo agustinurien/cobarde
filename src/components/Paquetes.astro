@@ -8,7 +8,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 <section id="paquete">
     <div class="paquetesContainer">
-        <h2 class="subtituloProposito">¿Cómo comparto <span style="color: red;">
+        <h2 class="subtituloProposito">¿Cómo comparto <span style={{color: "red", fontFamily: "TightEB"}}>
             mi propósito?
             </span></h2>
         <h4 class="sloganProposito">A través de charlas, encuentros virtuales o presenciales y conferencias,
@@ -29,7 +29,7 @@ import { MdArrowOutward } from "react-icons/md";
                     <img src={entrada.src} alt="">
                 </div>
                 <div class="buttons">
-                    <a href="/paquetes/entrada">MAS INFO</a>
+                    <a href="/paquetes/entrada">MÁS INFO</a>
                     <a href="/paquetes/entrada" class="arrow"><MdArrowOutward/></a>
                 </div>
             </div>
@@ -54,7 +54,7 @@ import { MdArrowOutward } from "react-icons/md";
                         <img src={platoP.src} alt="">
                     </div>
                     <div class="buttons">
-                        <a href="/paquetes/plato_principal">MAS INFO</a>
+                        <a href="/paquetes/plato_principal">MÁS INFO</a>
                         <a href="/paquetes/plato_principal" class="arrow"><MdArrowOutward/></a>
                     </div>
             </div>
@@ -77,7 +77,7 @@ import { MdArrowOutward } from "react-icons/md";
                     <img src={postre.src} alt="">
                 </div>
                 <div class="buttons">
-                    <a href="/paquetes/postre">MAS INFO</a>
+                    <a href="/paquetes/postre">MÁS INFO</a>
                     <a href="/paquetes/postre" class="arrow"><MdArrowOutward/></a>
                 </div>
             </div>
@@ -98,7 +98,7 @@ import { MdArrowOutward } from "react-icons/md";
                             de vida, no en una simple experiencia, para ello
                         </p>
                         <div class="buttons">
-                            <a href="/paquetes/renova">MAS INFO</a>
+                            <a href="/paquetes/renova">MÁS INFO</a>
                             <a href="/paquetes/renova" class="arrow"><MdArrowOutward/></a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ crecimiento personal dentro del
 ámbito laboral.
                         </p>
                         <div class="buttons">
-                            <a href="/paquetes/empresa">MAS INFO</a>
+                            <a href="/paquetes/empresa">MÁS INFO</a>
                             <a href="/paquetes/empresa" class="arrow"><MdArrowOutward/></a>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ crecimiento personal dentro del
 
 <style>
     section{
-        margin-top: 100px;
+        margin-top: 180px;
         display: flex;
         justify-content: center;
         background-color: #161616;
@@ -153,7 +153,7 @@ crecimiento personal dentro del
         align-items: center;
     }
     .subtituloProposito{
-        font-family: 'TightEB', sans-serif;
+        font-family: 'TightB', sans-serif;
         font-size: 3rem;
         padding: 0px;
         margin: 0px;
@@ -167,7 +167,7 @@ crecimiento personal dentro del
         padding-top: 10px;
         margin: 0px;
         font-size: 0.9rem;
-        width: 50%;
+        width: 500px;
         text-align: center;
     }
 
@@ -183,7 +183,7 @@ crecimiento personal dentro del
         flex-direction: column;
         justify-content: space-between;
         height: fit-content;
-        width: 165px;
+        width: 185px;
         border-radius: 25px;
         padding: 20px;
         border: 1px solid white;
@@ -198,7 +198,7 @@ crecimiento personal dentro del
     .paquetes span{
         padding-bottom: 10px;
         margin: 0px;
-        font-family: 'TightEB', sans-serif;
+        font-family: 'TightSB', sans-serif;
         font-size: 0.7rem;
 
     }
@@ -208,7 +208,7 @@ crecimiento personal dentro del
         height: fit-content;
         width: 82%;
         font-size: 1.5rem;
-        font-family: 'TightEB', sans-serif;
+        font-family: 'TightB', sans-serif;
 
     }
     .paquetes p{
@@ -235,7 +235,7 @@ crecimiento personal dentro del
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 720px;
+        width: 785px;
         margin-top: 30px;
         
     }
@@ -244,6 +244,8 @@ crecimiento personal dentro del
         padding-bottom: 5px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        gap: 10px;
         height: 220px;
         border: 1px solid white;
         border-radius: 25px;
@@ -267,7 +269,7 @@ crecimiento personal dentro del
         padding-top: 15px;
         padding-bottom: 5px;
         font-size: 0.7rem;
-        font-family: 'TightSB', sans-serif;
+        font-family: 'TightB', sans-serif;
     }
     .tituloExtra{
         font-family: 'TightEB', sans-serif;
@@ -277,10 +279,10 @@ crecimiento personal dentro del
         
     }
     .tituloExtra2{
-        font-family: 'TightEB', sans-serif;
+        font-family: 'TightB', sans-serif;
         font-size: 1.6rem;
         margin: 0px;
-        width: 60%;
+        width: 50%;
         
     }
     
@@ -321,14 +323,16 @@ crecimiento personal dentro del
         padding-top: 10px;
     }
     .buttons a{
-        padding: 2px 10px;
+        padding: 5px 10px;
         background-color: red;
         border-radius: 20px;
         color: white;
         text-decoration: none;
-        font-family: 'TightEB', sans-serif;
-        font-size: 0.8rem;
+        font-family: 'TightB', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
     }
+    
     .buttons .arrow{
         display: flex;
         justify-content: center;
