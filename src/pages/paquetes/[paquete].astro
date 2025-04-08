@@ -9,6 +9,7 @@ export async function getStaticPaths() {
 
 import entrada from "../../../public/images/EXCUSAS.jpg";
 import platoPrincipal from "../../../public/images/CUANTO.jpg";
+import ojosYanina from "../../../public/images/cuantoVales2.jpg";
 import postre from "../../../public/images/MANIFESTACIÓN.png";
 import Layout from "../../layouts/Layout.astro";
 import { MdArrowOutward } from "react-icons/md";
@@ -19,7 +20,8 @@ const datos = {
     entrada: {
         src: entrada,
         titulo: "DEJÁ ATRÁS TUS EXCUSAS",
-        top: "HACETE CARGO DE TU VIDA. DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
+        bold: "HACETE CARGO DE TU VIDA, ",
+        top: "DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
         subtitulo: "!ELIMINA ESE GRAN CONEJO BLANCO!",
         descripcionTitulo: "ENTRADA",
         descripcion3: "Lo opuesto a la responsabilidad es la culpa. Para eliminar las emociones negativas, debemos asumir que no existe culpa, sino situaciones llenas de responsabilidades y desafíos.\n\n ¿Sos un lanzador o un receptor de culpas? \n\n El perdón es libertad y paz mental… Eso es lo que obtenés.",
@@ -28,9 +30,10 @@ const datos = {
     },
     plato_principal: {
         src: platoPrincipal,
-        top: "",
+        bold: "",
+        top: "AUTOESTIMA",
         titulo: "¿SABES CUÁNTO REALMENTE VALES?",
-        subtitulo: "AUTOESTIMA AUTO COMPRENSION DE UNO MISMO.",
+        subtitulo: "AUTO COMPRENSION DE UNO MISMO.",
         descripcionTitulo: "PLATO PRINCIPAL",
         descripcion:"Preguntarte cuánto valés es comenzar entender lo que es realmente amarte.\n Cuando te querés de verdad, elegís escuchas tu voz interna y reconocé con claridad a esas personas que también se valoran como vos. Así transformás el verdadero valor de todo, tanto en lo emocional como en lo material.",
         descripcion2:"Saber cuánto vale tu tiempo es una forma de amarte, Lo mismo pasa con tu dedicación y tu esfuerzo en el trabajo y cada situación en la que te expongas y des esa parte de vos, por eso reconocer tu valor y poner limites, es amarte.\n\nte pregunto: ¿Cuánto vale tu vida? ¿Y cuánto valés vos en el mundo?",
@@ -38,6 +41,7 @@ const datos = {
     },
     postre: {
         src: postre,
+        bold: "",
         top: "PROGRAMÁ TU NUEVO SER.",
         titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
         subtitulo: "IMAGINACION CREATIVA",
@@ -54,9 +58,17 @@ const plato = datos[paquete]
 
     <section class={paquete}>
         <div class="platoImgContainer">
+            {paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">}
+
             <img src={plato.src.src} alt="">
+            
             <div class="platoTitle">
-                <span>{plato.top}</span>
+                <span>
+                    <strong>
+                        {plato.bold}
+                    </strong>
+                    {plato.top}
+                    </span>
                 <h2>{plato.titulo}</h2>
             </div>
         </div>
@@ -110,6 +122,22 @@ const plato = datos[paquete]
         height: 100%;
         object-fit: cover;
     }
+    .platoImgContainer .img2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .platoImgContainer:hover .img2{
+        opacity: 1;
+        
+    }
+
     .platoTitle{
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
         position: absolute;
@@ -124,7 +152,7 @@ const plato = datos[paquete]
     }
     .platoTitle span{
         margin: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         font-family: 'TightEB', sans-serif;
         font-size: 1.5rem;
     }
@@ -205,6 +233,10 @@ const plato = datos[paquete]
         margin: 0px;
         font-family: 'TightR', sans-serif;
     }
+    .plato_principal .subtitulo{
+        font-family: 'TightB', sans-serif;
+        font-weight: 700;
+    }
     .postre .descripcion p{
         margin: 0px;
         font-family: 'TightR', sans-serif;
@@ -214,6 +246,11 @@ const plato = datos[paquete]
     }
     .postre .cuadroDescripcion{
         width: 700px;
+    }
+    .postre .subtitulo{
+        font-family: 'TightB', sans-serif;
+        font-weight: 700;
+
     }
     
     .buttons{
@@ -308,6 +345,7 @@ const plato = datos[paquete]
     }
     .postre .subtitulo{
         font-size: 0.8rem;
+        
     }
     .postre .descripcion{
         width: 70%;
