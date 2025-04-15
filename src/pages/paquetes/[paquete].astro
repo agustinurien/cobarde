@@ -10,7 +10,11 @@ export async function getStaticPaths() {
 import entrada from "../../../public/images/EXCUSAS.jpg";
 import platoPrincipal from "../../../public/images/CUANTO.jpg";
 import ojosYanina from "../../../public/images/cuantoVales2.jpg";
+import fuckyou from "../../../public/images/fuckyou.jpg"
 import postre from "../../../public/images/MANIFESTACIÓN.png";
+
+import portada from "../../../public/images/portada.jpg";
+
 import Layout from "../../layouts/Layout.astro";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -18,6 +22,7 @@ const { paquete } = Astro.params;
 
 const datos = {
     entrada: {
+        video: "",
         src: entrada,
         titulo: "DEJÁ ATRÁS TUS EXCUSAS",
         bold: "HACETE CARGO DE TU VIDA, ",
@@ -29,6 +34,7 @@ const datos = {
         descripcion: "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
     },
     plato_principal: {
+        video: "",
         src: platoPrincipal,
         bold: "",
         top: "AUTOESTIMA",
@@ -40,6 +46,7 @@ const datos = {
         descripcion3: "Esto hay que aplicarlo en todos los ámbitos que quieras, pero lo más importante es entender, desde la raíz, cómo cambia todo cuando empezás a verte de otra manera. Eso es lo que realmente construye relaciones sanas simples y poderosas."
     },
     postre: {
+        video: "",
         src: postre,
         bold: "",
         top: "PROGRAMÁ TU NUEVO SER.",
@@ -58,7 +65,9 @@ const plato = datos[paquete]
 
     <section class={paquete}>
         <div class="platoImgContainer">
-            {paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">}
+            {paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
+            || paquete === "entrada" && <img src={fuckyou.src} alt="" class="img2">
+            }
 
             <img src={plato.src.src} alt="">
             
@@ -74,6 +83,19 @@ const plato = datos[paquete]
         </div>
         <div class="platoDescripcion">
             <h3 class="subtitulo">{plato.subtitulo}</h3>
+        <div class="videoSection">
+            <div class="videoContainer">
+                <video 
+                    controls 
+                    width="600"
+                    poster={portada.src}
+                    >
+                        
+                    <source src={plato.video} type="video/mp4" />
+                </video>
+            </div>
+
+        </div>
             <div class="cuadroDescripcion">
                 <h4>{plato.descripcionTitulo}</h4>
                 {paquete === "entrada" && <span>La vida será lo que tú hagas de ella. – S.S.</span>}
@@ -111,7 +133,25 @@ const plato = datos[paquete]
 </Layout>
 
 <style>
-    
+    .videoSection{
+        margin-bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .videoContainer{
+        
+        height: fit-content;
+        width: fit-content;
+        
+    }
+    .videoContainer video{
+        border-radius: 0px;
+        width: 1000px;
+        height: auto;
+        
+    }
     .platoImgContainer{
         position: relative;
         width: 100%;
@@ -303,6 +343,16 @@ const plato = datos[paquete]
 }
 
 @media screen and (max-width: 1024px){
+    .videoContainer{
+        width: 80%;
+        height: fit-content;
+    }
+    .videoContainer video{
+        width: 100%;
+        
+        
+    }
+
     .platoImgContainer{
 
         height: 50vh;

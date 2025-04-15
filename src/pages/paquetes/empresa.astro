@@ -37,65 +37,59 @@ import empresa from "../../../public/images/empresa.jpg";
                     esa forma, desarrollen su máximo
                     crecimiento personal, reflejando ese
                     mismo progreso en tu empresa.</p>
-            </div>
-            
-            
-            <div class="cuadroBienes">
-                <h4>¿QUÉ BIENES GENERA?</h4>
-                <div class="bienesDescripcion">
-                    <p class="text">Este es el terreno en el que hoy me muevo con total seguridad. Arranqué como Broker, fui
-                        creciendo hasta llegar a chief, y en el camino descubrí cómo avanzar en el inmobiliario y mejorar mis ingresos. Acá te voy a mostrar cómo vos también podés hacerlo.s</p>
-                        <div class="division">
-                            <div class="broker">
-                                <p class="tituloBroker">Convertite en el Broker
-                                    inmobiliario Elite</p>
-                                    <p class="divisionText">Dominá el arte de la venta y
-                                        multiplicá tus ingresos, disfrutando
-                                        de cada experiencia y adquiriendo
-                                        de ellas el mayor aprendizaje.
-                                        Enfrentamos cada desafío
-                                        convirtiéndolo en oportunidades
-                                        con formulas probadas en el
-                                        mercado, técnicas de venta y
-                                        entrenamiento personalizado para
-                                        perfeccionar tu habilidades en la
-                                        negociación.</p>
-                                    </div>
-                                    <div class="manos">
-                                        <p class="tituloManos">Dejá todo en
-                                            mis manos</p>
-                                            <p class="divisionText">Soy una apasionada del sector
-                                                inmobiliario. Me involucro al 100%
-                                                en cada proyecto, buscando constantemente nuevos desafíos
-                                                y oportunidades para crecer
-                                                profesionalmente. Estoy convencida de que puedo ser un
-                                                activo valioso para tu empresa.</p>
-                                                <ul>
-                                                    <li>Charlas</li>
-                                                    <li>Ventas</li>
-                                                    <li>Comercialización de
-                                                        desarrollos.</li>
-                                                    <li>Chief (dirección de equipos).</li>
-                                                    <li>Liderazgo y comunicación.</li>
-                                                </ul>
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
+                </div>
+                
+                
+                <div class="cuadroBienes">
+                    <h4>¿QUÉ BIENES GENERA?</h4>
+                    <div class="bienesDescripcion">
+                        <p class="text">Este es el terreno en el que hoy me muevo con total seguridad. Arranqué como Broker, fui
+                            creciendo hasta llegar a chief, y en el camino descubrí cómo avanzar en el inmobiliario y mejorar mis ingresos. Acá te voy a mostrar cómo vos también podés hacerlo.s</p>
+                            
+                            <div class="manos">
+                                
+                                <div class="manosDivision">
+                                    
+                                    <p class="tituloManos">Dejá todo en
+                                        mis manos
+                                    </p>
+                                    
+                                    <p class="divisionText">
+                                        Soy una apasionada del sector
+                                        inmobiliario. Me involucro al 100%
+                                        en cada proyecto, buscando constantemente nuevos desafíos
+                                        y oportunidades para crecer
+                                        profesionalmente. Estoy convencida de que puedo ser un
+                                        activo valioso para tu empresa.
+                                    </p>
                                 </div>
-                                <div class="buttons">
-                                    <a href="https://calendly.com/agus-urien2/30min">AGENDA UNA REUNION CONMIGO</a>
-                                    <a href="https://calendly.com/agus-urien2/30min" class="arrow"><MdArrowOutward/></a>
-                                </div>
-        
-        </div>
-        
-    </section>
-</Layout>
-
-<style>
-    section{
+                                
+                                <ul class="items">
+                                    <li>Charlas</li>
+                                    <li>Ventas</li>
+                                    <li>Comercialización de
+                                        desarrollos.
+                                    </li>
+                                    <li>Chief (dirección de equipos).</li>
+                                    <li>Liderazgo y comunicación.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="buttons">
+                        <a href="https://calendly.com/agus-urien2/30min">AGENDA UNA REUNION CONMIGO</a>
+                        <a href="https://calendly.com/agus-urien2/30min" class="arrow"><MdArrowOutward/></a>
+                    </div>
+                </section>
+                
+            </Layout>
+            
+            <style>
+                section{
         
     }
     .platoImgContainer{
@@ -170,55 +164,38 @@ import empresa from "../../../public/images/empresa.jpg";
         font-family: 'TightR', sans-serif;
         font-weight: 100;
     }
-    .division{
-        display: flex;
+    .manos{
         width: 100%;
-        
+        display: flex;
         border-top: 2px solid red;
-        
     }
-    .division .broker{
-        border-right: red 2px solid;
-        
+    .manosDivision{
         width: 50%;
     }
-    .division .broker .tituloBroker{
-        border-bottom: 2px red solid;
+    .manos .tituloManos{
+        
         margin: 0px;
         padding: 20px;
+        padding-top: 20px;
         font-family: 'TightEB', sans-serif;
     }
-    .division .broker .divisionText{
+    .manos .divisionText{
         margin: 0px;
         padding: 20px;
+        padding-top: 0px;
         font-family: 'TightR', sans-serif;
         font-weight: 100;
     }
-    .division .manos{
-        width: 50%;
-        
-    }
-    .division .manos .tituloManos{
-        border-bottom: 2px red solid;
-        margin: 0px;
-        padding: 20px;
-        font-family: 'TightEB', sans-serif;
-    }
-    .division .manos .divisionText{
-        margin: 0px;
-        padding: 20px;
+    .manos .items{
         font-family: 'TightR', sans-serif;
         font-weight: 100;
-    }
-    .division .manos ul{
+        margin: 0px;
+        width: 50%;
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        margin: 0px;
-        font-family: 'TightR', sans-serif;
-        font-weight: 100;
-        font-size: 0.9rem;
+        justify-content: space-around;
         padding-bottom: 20px;
+        padding-top: 10px;
     }
     .cuadroDescripcion{
         color: white;
@@ -324,16 +301,18 @@ import empresa from "../../../public/images/empresa.jpg";
         .descripcionText{
             column-count: 1;
         }
-        .division{
-            flex-direction: column;
-        }
-        .division .broker{
-            border-right: none;
-            border-bottom: 2px solid red;
-            width: 100%;
-        }
-        .division .manos{
-            width: 100%;
-        }
+        .manos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        border-top: 2px solid red;
+    }
+    .manosDivision{
+        width: 100%;
+    }
+    .divisionText{
+        width: 90%;
+    }
     }
 </style>

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.css";
 import { MdArrowOutward } from "react-icons/md";
 
 const Contacto = () => {
+  const [textarea, setTextarea] = useState("Subscripcion");
   return (
     <form className="contactoForm">
       <div className="inputs">
@@ -12,9 +13,26 @@ const Contacto = () => {
         </h3>
         <input type="text" placeholder="Nombre" />
         <input type="email" placeholder="Email" />
+        <select
+          name="opcion"
+          id="opcion"
+          onChange={(e) => setTextarea(e.target.value)}
+        >
+          <option value="Subscripcion">SUBSCRIPCION</option>
+          <option value="Consulta">CONSULTA</option>
+        </select>
+        {textarea === "Consulta" && (
+          <textarea
+            name="consulta"
+            id="consulta"
+            cols="30"
+            rows="10"
+            placeholder="Escriba su consulta..."
+          ></textarea>
+        )}
       </div>
       <div className="buttons">
-        <a href="">RECIBIR EMAILS</a>
+        <a href="">ENVIAR</a>
         <a href="" className="arrow">
           <MdArrowOutward />
         </a>
