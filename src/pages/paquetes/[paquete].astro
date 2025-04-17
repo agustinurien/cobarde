@@ -16,12 +16,13 @@ import postre from "../../../public/images/MANIFESTACIÓN.png";
 import portada from "../../../public/images/portada.jpg";
 
 import Layout from "../../layouts/Layout.astro";
-import { MdArrowOutward } from "react-icons/md";
+import Boton from "../../components/botonMercadoPago/Boton";
 
 const { paquete } = Astro.params;
 
 const datos = {
     entrada: {
+        precio: 30,
         video: "",
         src: entrada,
         titulo: "DEJÁ ATRÁS TUS EXCUSAS",
@@ -34,6 +35,7 @@ const datos = {
         descripcion: "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
     },
     plato_principal: {
+        precio: 20,
         video: "",
         src: platoPrincipal,
         bold: "",
@@ -46,6 +48,7 @@ const datos = {
         descripcion3: "Esto hay que aplicarlo en todos los ámbitos que quieras, pero lo más importante es entender, desde la raíz, cómo cambia todo cuando empezás a verte de otra manera. Eso es lo que realmente construye relaciones sanas simples y poderosas."
     },
     postre: {
+        precio: 10,
         video: "",
         src: postre,
         bold: "",
@@ -111,10 +114,7 @@ const plato = datos[paquete]
                 }
                 
             </div>
-            <div class="buttons">
-                <a href="https://calendly.com/agus-urien2/30min">AGENDA UNA REUNION CONMIGO</a>
-                <a href="https://calendly.com/agus-urien2/30min" class="arrow"><MdArrowOutward/></a>
-            </div>
+            <Boton plato={plato} client:load/>
             {
                 paquete === "entrada" && (
                     <div class="canabis">
@@ -293,34 +293,7 @@ const plato = datos[paquete]
 
     }
     
-    .buttons{
-        margin-top: 30px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 0px;
-        padding-top: 10px;
-    }
-    .buttons a{
-        padding: 6px 14px;
-        background-color: red;
-        border-radius: 20px;
-        color: white;
-        text-decoration: none;
-        font-family: 'TightEB', sans-serif;
-        font-weight: 800;
-        font-size: 0.8rem;
-    }
-    .buttons .arrow{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2px;
-        border-radius: 100%;
-        height: 20px;
-        width: 20px;
-        
-    }
+    
     
 .entrada .canabis{
     margin-top: 30px;
