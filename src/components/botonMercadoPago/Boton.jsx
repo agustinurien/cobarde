@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdArrowOutward } from 'react-icons/md';
-import './Boton.css'
+import './boton.css'
 
 const Boton = (plato) => {
     const crearPreferenciaCompra = async () => {
