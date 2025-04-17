@@ -25,7 +25,6 @@ export async function POST({ request }) {
                 failure: 'http://localhost:4321/failure',
                 pending: 'http://localhost:4321/pending',
             },
-            auto_return: 'approved',
         };
 
         const response = await preferenceClient.create({ body: preference }); // ✅ así sí
@@ -33,6 +32,7 @@ export async function POST({ request }) {
         return new Response(JSON.stringify({ init_point: response.init_point }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' },
+
         });
     } catch (error) {
         console.error('Error creando preferencia:', error);
