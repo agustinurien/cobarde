@@ -13,7 +13,7 @@ import ojosYanina from "../../../public/images/cuantoVales2.jpg";
 import fuckyou from "../../../public/images/fuckyou.jpg"
 import postre from "../../../public/images/MANIFESTACIÓN.png";
 
-import portada from "../../../public/images/portada.jpg";
+import Video from "../../components/Video";
 
 import Layout from "../../layouts/Layout.astro";
 import Boton from "../../components/botonMercadoPago/Boton";
@@ -36,7 +36,7 @@ const datos = {
     },
     plato_principal: {
         precio: 20,
-        video: "",
+        video: "https://drive.google.com/file/d/1Ys5cLCi1_SUBXKj6wtCtS0o2SNWL-g25/preview",
         src: platoPrincipal,
         bold: "",
         top: "AUTOESTIMA",
@@ -49,7 +49,7 @@ const datos = {
     },
     postre: {
         precio: 10,
-        video: "",
+        video: "https://drive.google.com/file/d/1B4xCqiZIj8-6LNCprwb8z7oItQIJLRo0/preview",
         src: postre,
         bold: "",
         top: "PROGRAMÁ TU NUEVO SER.",
@@ -62,15 +62,17 @@ const datos = {
 };
 
 // Acceder al objeto con el nombre del paquete
-const plato = datos[paquete]
+const plato = datos[paquete];
 ---
 <Layout>
 
     <section class={paquete}>
         <div class="platoImgContainer">
-            {paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
+            {
+                paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
             || paquete === "entrada" && <img src={fuckyou.src} alt="" class="img2">
             }
+            
 
             <img src={plato.src.src} alt="">
             
@@ -86,19 +88,22 @@ const plato = datos[paquete]
         </div>
         <div class="platoDescripcion">
             <h3 class="subtitulo">{plato.subtitulo}</h3>
-        <div class="videoSection">
-            <div class="videoContainer">
-                <video 
-                    controls 
-                    width="600"
-                    poster={portada.src}
-                    >
-                        
-                    <source src={plato.video} type="video/mp4" />
-                </video>
-            </div>
+            {
+                paquete !== "entrada" && 
+            <div class="videoSection">
+                <div class="videoContainer">
+            <iframe
+                id="videoIframe"
+                src={plato.video}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                title="video"
+                ></iframe>
 
         </div>
+            </div>
+            }
+
             <div class="cuadroDescripcion">
                 <h4>{plato.descripcionTitulo}</h4>
                 {paquete === "entrada" && <span>La vida será lo que tú hagas de ella. – S.S.</span>}
@@ -134,24 +139,24 @@ const plato = datos[paquete]
 
 <style>
     .videoSection{
-        margin-bottom: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .videoContainer{
-        
-        height: fit-content;
-        width: fit-content;
-        
-    }
-    .videoContainer video{
-        border-radius: 0px;
-        width: 1000px;
-        height: auto;
-        
-    }
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videoContainer{
+    aspect-ratio: 16 / 9;
+    width: 1000px;
+    position: relative;
+}
+.videoContainer iframe{
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    
+}
+
     .platoImgContainer{
         position: relative;
         width: 100%;

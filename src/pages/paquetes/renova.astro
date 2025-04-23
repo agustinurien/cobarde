@@ -2,6 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import { MdArrowOutward } from "react-icons/md";
 import renova from "../../../public/images/renova.jpg";
+import Boton from "../../components/botonMercadoPago/Boton";
+
+const renovaPago = {
+    titulo: "UN VIAJE HACIA TU VERDADERO POTENCIAL",
+    precio: 15,
+};
 ---
 
 <Layout>
@@ -43,8 +49,7 @@ import renova from "../../../public/images/renova.jpg";
                     para lograr el cambio deseado.</p>
             </div>
             <div class="buttons">
-                <a href="https://calendly.com/agus-urien2/30min">AGENDA UNA REUNION CONMIGO</a>
-                <a href="https://calendly.com/agus-urien2/30min" class="arrow"><MdArrowOutward/></a>
+                <Boton plato={renovaPago} client:load/>
             </div>
         </div>
         
@@ -160,7 +165,6 @@ import renova from "../../../public/images/renova.jpg";
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 40px;
     }
 
     @media screen and (max-width: 1024px){
