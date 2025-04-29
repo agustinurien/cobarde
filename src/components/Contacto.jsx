@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./contact.css";
 import { MdArrowOutward } from "react-icons/md";
 
-
 const Contacto = () => {
   const [textarea, setTextarea] = useState("Subscripcion");
 
@@ -27,7 +26,7 @@ const Contacto = () => {
     });
 
     if (res.ok) {
-      alert("Mensaje enviado correctamente.");
+      alert("Mensaje enviado correctamente.", res.status);
       form.reset();
     } else {
       alert("Hubo un error al enviar el mensaje.");
@@ -38,13 +37,30 @@ const Contacto = () => {
     <form className="contactoForm" onSubmit={handleSubmit}>
       <div className="inputs">
         <h3>
-          Escribí tus datos y no seas <span style={{ color: "red" }}>cobarde</span>.
+          Escribí tus datos y no seas{" "}
+          <span style={{ color: "red" }}>cobarde</span>.
         </h3>
 
-        <input type="text" name="name" id="name" placeholder="Nombre" required />
-        <input type="email" name="email" id="email" placeholder="Email" required />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nombre"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
 
-        <select name="opcion" id="opcion" onChange={(e) => setTextarea(e.target.value)}>
+        <select
+          name="opcion"
+          id="opcion"
+          onChange={(e) => setTextarea(e.target.value)}
+        >
           <option value="Subscripcion">SUBSCRIPCION</option>
           <option value="Consulta">CONSULTA</option>
         </select>

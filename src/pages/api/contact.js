@@ -2,7 +2,7 @@ export const prerender = false;
 
 import { Resend } from "resend";
 
-const resend = new Resend(import.meta.env.MP_ACCESS_TOKEN);
+const resend = new Resend("re_8mgSScxX_9UgfTvJa7746iXT5hmuKTNme");
 
 export async function POST({ request }) {
   try {
@@ -16,7 +16,7 @@ export async function POST({ request }) {
 
     const data = {
       from: "Cobarde Web <onboarding@resend.dev>",
-      to: "cobardeoficial@gmail.com",
+      to: "agus.urien2@gmail.com",
       subject: `Nuevo mensaje de ${name} - ${matter}`,
       text: ` Has recibido un nuevo mensaje de contacto:
 Nombre: ${name}
@@ -24,9 +24,8 @@ Email: ${email}
 Motivo: ${matter} 
 ${message ? `\nMensaje: ${message}` : ""}`,
     };
-
+    console.log(data);
     await resend.emails.send(data);
-
     return new Response("Correo enviado correctamente", { status: 200 });
   } catch (err) {
     console.error("Error al enviar correo:", err);
