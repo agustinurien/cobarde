@@ -15,6 +15,7 @@ import postre from "../../../public/images/MANIFESTACIÓN.png";
 
 import Layout from "../../layouts/Layout.astro";
 import Boton from "../../components/botonMercadoPago/Boton";
+import LlenarDatos from "../../components/LlenarDatos/LlenarDatos";
 
 const { paquete } = Astro.params;
 
@@ -33,7 +34,7 @@ const datos = {
         descripcion: "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
     },
     plato_principal: {
-        precio: 400000,
+        precio: 10,
         video:  "https://www.youtube.com/embed/gOZDE63WcUI",
         src: platoPrincipal,
         bold: "",
@@ -65,6 +66,7 @@ const plato = datos[paquete];
 <Layout>
 
     <section class={paquete}>
+
         <div class="platoImgContainer">
             {
                 paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
@@ -117,7 +119,6 @@ const plato = datos[paquete];
                 }
                 
             </div>
-            <Boton plato={plato} client:load/>
             {
                 paquete === "entrada" && (
                     <div class="canabis">
@@ -130,12 +131,26 @@ const plato = datos[paquete];
                     </div>
                 )
             }
+            <div class="datosContainer">
+                
+            <LlenarDatos plato={plato} client:load />
+            </div>
         </div>
         
     </section>
 </Layout>
 
 <style>
+    .datosContainer{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        margin-top: 30px;
+        
+    }
     .videoSection{
     margin-bottom: 40px;
     width: 100%;

@@ -14,13 +14,20 @@ const Boton = (plato) => {
           title: plato.plato.titulo,
           quantity: 1,
           unit_price: plato.plato.precio,
+          payer: {
+            name: plato.plato.usuario.nombre,
+            email: plato.plato.usuario.email,
+            identification: {
+              type: "phone",
+              number: plato.plato.usuario.numero,
+            },
+          },
         }),
       });
 
       const data = await respuesta.json();
 
       if (data.init_point) {
-        // Redirigir al usuario a la página de pago de Mercado Pago
         window.location.href = data.init_point;
       } else {
         // Manejo de errores
