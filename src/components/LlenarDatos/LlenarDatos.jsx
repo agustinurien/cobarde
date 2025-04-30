@@ -16,7 +16,6 @@ const LlenarDatos = ({ plato }) => {
     },
   };
 
-  console.log(datosCompletos);
 
   return (
     <div className="llenarDatosContainer">

@@ -28,9 +28,9 @@ export async function POST({ request }) {
         },
       },
       back_urls: {
-        success: "http://localhost:4321/success",
-        failure: "http://localhost:4321/failure",
-        pending: "http://localhost:4321/pending",
+        success: "https://cobarde.vercel.app/success",
+        failure: "https://cobarde.vercel.app/failure",
+        pending: "https://cobarde.vercel.app/pending",
       },
     };
 
