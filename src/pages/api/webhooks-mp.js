@@ -1,5 +1,7 @@
 import { Resend } from "resend";
 
+export const prerender = false;
+
 const resend = new Resend("re_8mgSScxX_9UgfTvJa7746iXT5hmuKTNme"); // reemplazá con tu clave real
 const mpAccessToken = import.meta.env.MP_ACCESS_TOKEN;
 
