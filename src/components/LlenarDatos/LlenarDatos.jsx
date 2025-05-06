@@ -6,6 +6,21 @@ const LlenarDatos = ({ plato }) => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [numero, setNumero] = useState("");
+  const [paquete, setPaquete] = useState("no"); // Estado para el paquete adicional
+
+  // Precio del paquete 3
+  const parejaPrecio = 800000;
+  let precioFinal = plato.precio;
+
+  // Si se selecciona "sí", sumamos el precio del paquete 3
+  if (paquete === "si") {
+    precioFinal += parejaPrecio;
+  }
+
+  let titulo = plato.titulo;
+  if (paquete === "si") {
+    titulo += " + ¿Estás siendo vos mismo con la persona que tenés a tu lado?";
+  }
 
   const datosCompletos = {
     ...plato,
@@ -14,12 +29,14 @@ const LlenarDatos = ({ plato }) => {
       email,
       numero,
     },
+    precio: precioFinal, // Incluimos el precio final con el posible paquete adicional
+    titulo: titulo, // Actualizamos el título para que incluya el paquete 3
   };
 
   return (
     <div className="llenarDatosContainer">
       <div className="llenarDatos">
-        <h2>Completa con tus Datos Personales.</h2>
+        <h2>Detalles de contacto necesarios para la compra</h2>
         <input
           className="inputPago"
           type="text"
@@ -39,11 +56,44 @@ const LlenarDatos = ({ plato }) => {
         <input
           className="inputPago"
           type="number"
-          placeholder="Número"
+          placeholder="Celular"
           value={numero}
           onChange={(e) => setNumero(e.target.value)}
           required
         />
+
+        {plato.titulo === "UN VIAJE HACIA TU VERDADERO POTENCIAL" && (
+          <div className="selectPaquete">
+            <div className="selectPaquete">
+              <h3>Suma un paquete adicional!</h3>
+            </div>
+
+            <div className="selectPaqueteRadio">
+              <label>
+                <input
+                  type="radio"
+                  name="paquete"
+                  value="si"
+                  checked={paquete === "si"}
+                  onChange={(e) => setPaquete(e.target.value)}
+                />
+                ¿Estás siendo vos mismo con la persona que tenés a tu lado?
+              </label>
+            </div>
+            <div className="selectPaqueteRadio">
+              <label>
+                <input
+                  type="radio"
+                  name="paquete"
+                  value="no"
+                  checked={paquete === "no"}
+                  onChange={(e) => setPaquete(e.target.value)}
+                />
+                No
+              </label>
+            </div>
+          </div>
+        )}
 
         <Boton plato={datosCompletos} />
       </div>

@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { MdArrowOutward } from "react-icons/md";
 import empresa from "../../../public/images/empresa.jpg";
 import Boton from "../../components/botonMercadoPago/Boton";
+import LlenarDatos from "../../components/LlenarDatos/LlenarDatos";
 
 const voyEmpresa = {
         precio: 650000,
@@ -98,12 +99,25 @@ const voyEmpresa = {
                         
                     </div>
                     
-                    <Boton plato={voyEmpresa} client:load/>
+                    <div class="datosContainer">
+                
+                        <LlenarDatos plato={voyEmpresa} client:load />
+                        </div>
                 </section>
                 
             </Layout>
             
 <style>
+    .datosContainer{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        width: 100%;
+        margin-top: 50px;
+        
+    }
     .videoSection{
     margin-bottom: 40px;
     width: 100%;

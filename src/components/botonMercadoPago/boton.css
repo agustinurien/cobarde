@@ -1,10 +1,11 @@
 .buttonsMercadoPago {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: end;
   gap: 0px;
-  padding-top: 10px;
+  padding-top: 40px;
+  width: 100%;
 }
 .buttonsMercadoPago button {
   cursor: pointer;

@@ -3,13 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import { MdArrowOutward } from "react-icons/md";
 import renova from "../../../public/images/renova.jpg";
 import Boton from "../../components/botonMercadoPago/Boton";
+import LlenarDatos from "../../components/LlenarDatos/LlenarDatos";
 
 const renovaPago = {
     titulo: "UN VIAJE HACIA TU VERDADERO POTENCIAL",
     precio: 1000000,
 };
 
-const parejaPrecio = 800000;
+
 ---
 
 <Layout>
@@ -50,15 +51,26 @@ const parejaPrecio = 800000;
                     nalizado sobre tu trabajo personal,
                     para lograr el cambio deseado.</p>
             </div>
-            <div class="buttonsMercado">
-                <Boton plato={renovaPago} client:load/>
-            </div>
+            <div class="datosContainer">
+                
+                <LlenarDatos plato={renovaPago} client:load />
+                </div>
         </div>
         
     </section>
 </Layout>
 
 <style>
+    .datosContainer{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        width: 100%;
+        margin-top: 40px;
+        
+    }
     section{
         
     }

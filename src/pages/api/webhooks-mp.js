@@ -36,7 +36,7 @@ export async function POST({ request }) {
     console.log("Detalles del pago:", payment);
 
     // 📧 DATOS DEL COMPRADOR
-    const buyerName = payment.payer?.first_name || "Sin nombre";
+    const buyerName = payment.payer?.name || "Sin nombre";
     const buyerEmail = payment.payer?.email || "Sin email";
     const purchasedItem =
       payment.additional_info?.items?.[0]?.title || "Producto desconocido";
