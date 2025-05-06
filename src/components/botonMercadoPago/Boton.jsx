@@ -37,7 +37,8 @@ const Boton = (plato) => {
       console.error("Error en la creación de la preferencia:", error);
     }
   };
-  const usuario = plato.plato.usuario;
+
+  const usuario = plato?.plato?.usuario;
   const emailValido =
     usuario.email && usuario.email.includes("@") && usuario.email.includes(".");
   const camposIncompletos = !emailValido || !usuario.numero || !usuario.nombre;
