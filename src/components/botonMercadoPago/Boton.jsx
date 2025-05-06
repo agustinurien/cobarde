@@ -37,10 +37,25 @@ const Boton = (plato) => {
       console.error("Error en la creación de la preferencia:", error);
     }
   };
+  const usuario = plato.plato.usuario;
+  const emailValido =
+    usuario.email && usuario.email.includes("@") && usuario.email.includes(".");
+  const camposIncompletos = !emailValido || !usuario.numero || !usuario.nombre;
+
   return (
     <div className="buttonsMercadoPago">
-      <button onClick={crearPreferenciaCompra}>Pagar con Mercado Pago</button>
-      <button onClick={crearPreferenciaCompra} className="arrow">
+      <button
+        disabled={camposIncompletos}
+        onClick={crearPreferenciaCompra}
+        className={camposIncompletos ? "disabled-button" : ""}
+      >
+        Pagar con Mercado Pago
+      </button>
+      <button
+        disabled={camposIncompletos}
+        onClick={crearPreferenciaCompra}
+        className={camposIncompletos ? "disabled-button arrow" : "arrow"}
+      >
         <MdArrowOutward />
       </button>
     </div>

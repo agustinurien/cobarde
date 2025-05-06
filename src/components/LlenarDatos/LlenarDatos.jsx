@@ -16,7 +16,6 @@ const LlenarDatos = ({ plato }) => {
     },
   };
 
-
   return (
     <div className="llenarDatosContainer">
       <div className="llenarDatos">
@@ -27,6 +26,7 @@ const LlenarDatos = ({ plato }) => {
           placeholder="Nombre"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
+          required
         />
         <input
           className="inputPago"
@@ -34,6 +34,7 @@ const LlenarDatos = ({ plato }) => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           className="inputPago"
@@ -41,6 +42,7 @@ const LlenarDatos = ({ plato }) => {
           placeholder="Número"
           value={numero}
           onChange={(e) => setNumero(e.target.value)}
+          required
         />
 
         <Boton plato={datosCompletos} />

@@ -7,6 +7,7 @@
   padding-top: 10px;
 }
 .buttonsMercadoPago button {
+  cursor: pointer;
   border: none;
   padding: 6px 14px;
   background-color: red;
@@ -18,6 +19,7 @@
   font-size: 0.8rem;
 }
 .buttonsMercadoPago .arrow {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,4 +27,9 @@
   border-radius: 100%;
   height: 30px;
   width: 30px;
+}
+.buttonsMercadoPago .disabled-button {
+  background-color: rgb(255, 71, 71);
+  color: rgba(255, 255, 255, 0.587);
+  cursor: not-allowed;
 }
