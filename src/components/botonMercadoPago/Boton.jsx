@@ -39,6 +39,11 @@ const Boton = (plato) => {
   };
 
   const usuario = plato?.plato?.usuario;
+
+  if (!usuario) {
+    return null;
+  }
+
   const emailValido =
     usuario.email && usuario.email.includes("@") && usuario.email.includes(".");
   const camposIncompletos = !emailValido || !usuario.numero || !usuario.nombre;
