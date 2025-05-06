@@ -65,7 +65,7 @@ const LlenarDatos = ({ plato }) => {
         {plato.titulo === "UN VIAJE HACIA TU VERDADERO POTENCIAL" && (
           <div className="selectPaquete">
             <div className="selectPaquete">
-              <h3>Suma un paquete adicional!</h3>
+              <h3>Incorpora un paquete adicional</h3>
             </div>
 
             <div className="selectPaqueteRadio">
