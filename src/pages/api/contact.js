@@ -15,8 +15,8 @@ export async function POST({ request }) {
     }
 
     const data = {
-      from: "Cobarde Web <onboarding@resend.dev>",
-      to: "agus.urien2@gmail.com",
+      from: "Cobarde Web <web@cobarde.com.ar>",
+      to: "agus.urien3@gmail.com",
       subject: `Nuevo mensaje de ${name} - ${matter}`,
       text: ` Has recibido un nuevo mensaje de contacto:
 Nombre: ${name}

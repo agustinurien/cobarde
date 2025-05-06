@@ -44,8 +44,8 @@ export async function POST({ request }) {
 
     // 1️⃣ Enviamos correo a vos
     await resend.emails.send({
-      from: "Cobarde Web <onboarding@resend.dev>",
-      to: "agus.urien2@gmail.com",
+      from: "Cobarde Web <web@cobarde.com.ar>",
+      to: "agus.urien3@gmail.com",
       subject: "💰 Nueva venta realizada",
       text: `
 Se ha realizado una nueva compra en Cobarde Web.
@@ -61,8 +61,8 @@ ID de pago: ${payment.id}
 
     // 2️⃣ Enviamos correo al comprador
     await resend.emails.send({
-      from: "Cobarde Web <onboarding@resend.dev>",
-      to: "agus.urien2@gmail.com",
+      from: "Cobarde Web <web@cobarde.com.ar>",
+      to: buyerEmail,
       subject: "¡Gracias por tu compra!",
       text: `
 Hola ${buyerName},
