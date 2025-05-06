@@ -17,7 +17,7 @@ export async function POST({ request }) {
     const data = {
       from: "Cobarde Web <contacto@cobarde.com.ar>",
       to: "agus.urien3@gmail.com",
-      reply_to: email,
+      replyTo: email,
       subject: `Nuevo mensaje de ${name} - ${matter}`,
       text: ` Has recibido un nuevo mensaje de contacto:
 Nombre: ${name}
