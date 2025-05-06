@@ -1,7 +1,7 @@
 import { MercadoPagoConfig, Preference } from "mercadopago";
 
 const mercadopago = new MercadoPagoConfig({
-  accessToken: import.meta.env.MP_ACCESS_TOKEN,
+  accessToken: import.meta.env.MP_ACCESS_TOKENAGUS,
 });
 
 const preferenceClient = new Preference(mercadopago); // 👈 se pasa la instancia
