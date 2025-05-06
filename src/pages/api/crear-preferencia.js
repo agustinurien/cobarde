@@ -28,9 +28,9 @@ export async function POST({ request }) {
         },
       },
       back_urls: {
-        success: "https://cobarde.vercel.app/success",
-        failure: "https://cobarde.vercel.app/failure",
-        pending: "https://cobarde.vercel.app/pending",
+        success: "https://cobarde.com.ar/success",
+        failure: "https://cobarde.com.ar/failure",
+        pending: "https://cobarde.com.ar/pending",
       },
     };
 
