@@ -4,7 +4,7 @@ export const prerender = false;
 
 const resend = new Resend("re_8mgSScxX_9UgfTvJa7746iXT5hmuKTNme");
 
-const mpAccessToken = import.meta.env.MP_ACCESS_TOKENAGUS;
+const mpAccessToken = import.meta.env.MP_ACCESS_TOKEN;
 
 export async function POST({ request }) {
   try {
