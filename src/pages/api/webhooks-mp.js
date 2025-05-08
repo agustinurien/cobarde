@@ -77,7 +77,7 @@ Hola ${buyerName},
 ¡Gracias por comprar "${purchasedItem}" en Cobarde Web!
 
 Ahora podés agendar tu reunión directamente desde este enlace:
-👉 https://calendly.com/tu-link-personalizado
+👉 https://calendly.com/cobardeoficial
 
 Cualquier consulta, respondé este mail.
 

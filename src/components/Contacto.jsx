@@ -61,7 +61,7 @@ const Contacto = () => {
           id="opcion"
           onChange={(e) => setTextarea(e.target.value)}
         >
-          <option value="Subscripcion">SUBSCRIPCION</option>
+          <option value="Subscripcion">SUSCRIPCION</option>
           <option value="Consulta">CONSULTA</option>
         </select>
 

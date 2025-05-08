@@ -22,9 +22,7 @@ import { MdArrowOutward } from "react-icons/md";
                 <div class="textoPaquetes">
                     <span>ENTRADA</span>
                     <h4>¿Estás listo para eliminar tu gran excusa?</h4>
-                    <p>Eliminá todos tus pretextos,
-                        haciéndote cargo de tu vida y
-                        decidiendo quien querés ser.</p>
+                    <p>Eliminá todos tus pretextos, haciéndote cargo de tu vida y decidiendo quién querés ser.</p>
                 </div>
                 <div class="platoImgContainer">
                     <img src={entrada.src} alt="entradaPlato" class="platoEImg">
@@ -39,16 +37,9 @@ import { MdArrowOutward } from "react-icons/md";
                 <div class="textoPaquetes">
 
                     <span>PLATO PRINCIPAL</span>
-                    <h4>¿Cuanto
-                        vale tu
-                        vida?
+                    <h4>¿Cuánto vale tu vida?
                     </h4>
-                    <p>Emprenderás un viaje interior
-                        que fortalecerá tu autoestima,
-                        te llevará a una mayor auto
-                        comprensión y te permitirá
-                        experimentar un profundo
-                        amor propio.</p>
+                    <p>Emprenderás un viaje interior que fortalecerá tu autoestima, te llevará a una mayor autocomprensión y te permitirá experimentar un profundo amor propio.</p>
                     </div>
                     <div class="platoImgContainer">
 
@@ -67,12 +58,7 @@ import { MdArrowOutward } from "react-icons/md";
                         hacer
                         realidad
                         tus metas?</h4>
-                    <p>Definí tu meta, visualizala con
-                            certeza, y aplicá las
-                            herramientas que tenés
-                            dentro para alinear tu mente y
-                            tu energía, llevando tu visión a
-                            la realidad.</p>
+                    <p>Definí tu meta, visualizala con certeza y aplicá las herramientas que tenés dentro para alinear tu mente y tu energía, llevando tu visión a la realidad.</p>
                 </div>
                 <div class="platoImgContainer">
                     <img src={postre.src} alt="postrePlato" class="platoPOImg">
@@ -84,7 +70,30 @@ import { MdArrowOutward } from "react-icons/md";
             </div>
         </div>
 
+        
+
         <div class="extras">
+            <div class="contenedorPareja">
+                <div class="pareja">
+                    <span>
+                        CHARLAS A PAREJAS
+                    </span>
+                    <h4>¿Estás siendo vos mismo con la persona que tenés a tu lado?
+
+                    </h4>
+                </div>
+                <div class="textoPareja">
+                    <p>Te acompaño a vos y a tu pareja en el camino que elijan juntos. <br>
+                        Sumá este acompañamiento a cualquiera de los demás paquetes.
+                    </p>
+                    <select id="paqueteSelect">
+                        <option value="">Elegí un paquete</option>
+                        <option value="/paquetes/entrada">¿Estás listo para eliminar tu gran excusa?</option>
+                        <option value="/paquetes/plato_principal">¿Cuanto vale tu vida?</option>
+                        <option value="/paquetes/postre">¿Vas a hacer realidad tus metas?</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="extra sobremesa">
                 <div class="imgExtraContainer">
@@ -100,9 +109,7 @@ import { MdArrowOutward } from "react-icons/md";
                         concepto
                         propio.</h4>
                         <div class="textoExtra">
-                            <p>Hacé que tus cambios se conviertan en tu estilo
-                                aplicamos la actualización de uno mismo.
-                                de vida, no en una simple experiencia, para ello
+                            <p>Hacé que tus cambios se conviertan en tu estilo de vida, no en una simple experiencia. Para ello, aplicamos la actualización de uno mismo.
                             </p>
                             <div class="buttons">
                                 <a href="/paquetes/renova">MÁS INFO</a>
@@ -137,27 +144,7 @@ import { MdArrowOutward } from "react-icons/md";
                         </div>
                     </div>
             </div>
-            <div class="contenedorPareja">
-                <div class="pareja">
-                    <span>
-                        CHARLAS A PAREJAS
-                    </span>
-                    <h4>¿Estás siendo vos mismo con la persona que tenés a tu lado?</h4>
-                </div>
-                <div class="textoPareja">
-                    <p>Te acompaño a vos y a tu pareja en el camino que elijan juntos. <br>
-                    Sumá este acompañamiento a cualquiera de los demás paquetes.
-                    </p>
-                    <select id="paqueteSelect">
-                        <option value="">Elegí un paquete</option>
-                        <option value="/paquetes/entrada">¿Estás listo para eliminar tu gran excusa?</option>
-                        <option value="/paquetes/plato_principal">¿Cuanto vale tu vida?</option>
-                        <option value="/paquetes/postre">¿Vas a hacer realidad tus metas?</option>
-                        <option value="/paquetes/renova">Renová tu concepto propio.</option>
-                        <option value="/paquetes/empresa">¿Querés que tus empleados sean felices trabajando en tu empresa?</option>
-                    </select>
-                </div>
-            </div>
+            
 
             <div class="slogan">
                 <p>
