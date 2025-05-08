@@ -5,6 +5,7 @@ export const prerender = false;
 const resend = new Resend("re_8mgSScxX_9UgfTvJa7746iXT5hmuKTNme");
 
 const mpAccessToken = import.meta.env.MP_ACCESS_TOKEN;
+console.log("Token de acceso de Mercado Pago:", mpAccessToken);
 
 export async function POST({ request }) {
   try {
@@ -13,6 +14,11 @@ export async function POST({ request }) {
     // Aseguramos que sea un pago
     if (body.type !== "payment") {
       return new Response("No es evento de pago", { status: 200 });
+    }
+
+    if (!mpAccessToken) {
+      console.error("⚠️ MP_ACCESS_TOKEN no está definido.");
+      return new Response("Token inválido", { status: 500 });
     }
 
     const paymentId = body.data.id;
