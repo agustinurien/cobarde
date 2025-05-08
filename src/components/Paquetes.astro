@@ -148,6 +148,14 @@ import { MdArrowOutward } from "react-icons/md";
                     <p>Te acompaño a vos y a tu pareja en el camino que elijan juntos. <br>
                     Sumá este acompañamiento a cualquiera de los demás paquetes.
                     </p>
+                    <select id="paqueteSelect">
+                        <option value="">Elegí un paquete</option>
+                        <option value="/paquetes/entrada">¿Estás listo para eliminar tu gran excusa?</option>
+                        <option value="/paquetes/plato_principal">¿Cuanto vale tu vida?</option>
+                        <option value="/paquetes/postre">¿Vas a hacer realidad tus metas?</option>
+                        <option value="/paquetes/renova">Renová tu concepto propio.</option>
+                        <option value="/paquetes/empresa">¿Querés que tus empleados sean felices trabajando en tu empresa?</option>
+                    </select>
                 </div>
             </div>
 
@@ -164,6 +172,13 @@ import { MdArrowOutward } from "react-icons/md";
         </div>
     </div>
 </section>
+
+<script is:client>
+    document.getElementById("paqueteSelect")?.addEventListener("change", function (e) {
+      const url = e.target.value;
+      if (url) window.location.href = url;
+    });
+  </script>
 
 <style>
     section{
@@ -323,6 +338,7 @@ import { MdArrowOutward } from "react-icons/md";
     }
     .textoPareja{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -330,7 +346,20 @@ import { MdArrowOutward } from "react-icons/md";
         font-family: 'TightR', sans-serif;
         font-size: 0.8rem;
         width: 70%;
+        height: 50%;
         margin: 0px;
+    }
+    #paqueteSelect{
+        width: 70%;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        padding-left: 10px;
+        font-family: 'TightB', sans-serif;
+        font-size: 0.7rem;
+        background-color: red;
+        color: white;
+
     }
 
 

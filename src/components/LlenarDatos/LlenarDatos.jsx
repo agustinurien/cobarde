@@ -62,38 +62,36 @@ const LlenarDatos = ({ plato }) => {
           required
         />
 
-        {plato.titulo === "UN VIAJE HACIA TU VERDADERO POTENCIAL" && (
+        <div className="selectPaquete">
           <div className="selectPaquete">
-            <div className="selectPaquete">
-              <h3>Incorpora un paquete adicional</h3>
-            </div>
-
-            <div className="selectPaqueteRadio">
-              <label>
-                <input
-                  type="radio"
-                  name="paquete"
-                  value="si"
-                  checked={paquete === "si"}
-                  onChange={(e) => setPaquete(e.target.value)}
-                />
-                ¿Estás siendo vos mismo con la persona que tenés a tu lado?
-              </label>
-            </div>
-            <div className="selectPaqueteRadio">
-              <label>
-                <input
-                  type="radio"
-                  name="paquete"
-                  value="no"
-                  checked={paquete === "no"}
-                  onChange={(e) => setPaquete(e.target.value)}
-                />
-                No
-              </label>
-            </div>
+            <h3>Incorpora un paquete adicional</h3>
           </div>
-        )}
+
+          <div className="selectPaqueteRadio">
+            <label>
+              <input
+                type="radio"
+                name="paquete"
+                value="si"
+                checked={paquete === "si"}
+                onChange={(e) => setPaquete(e.target.value)}
+              />
+              ¿Estás siendo vos mismo con la persona que tenés a tu lado?
+            </label>
+          </div>
+          <div className="selectPaqueteRadio">
+            <label>
+              <input
+                type="radio"
+                name="paquete"
+                value="no"
+                checked={paquete === "no"}
+                onChange={(e) => setPaquete(e.target.value)}
+              />
+              No
+            </label>
+          </div>
+        </div>
 
         <Boton plato={datosCompletos} />
       </div>
