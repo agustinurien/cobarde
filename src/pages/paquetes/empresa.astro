@@ -6,342 +6,326 @@ import Boton from "../../components/botonMercadoPago/Boton";
 import LlenarDatos from "../../components/LlenarDatos/LlenarDatos";
 
 const voyEmpresa = {
-        precio: 650000,
-        titulo: "DEJÁ ATRÁS TUS EXCUSAS",
-    }
+  precio: 650000,
+  titulo: "VOY A TU EMPRESA",
+};
 ---
 
 <Layout>
-
-    <section >
-        <div class="platoImgContainer">
-            <img src={empresa.src} alt="">
-            <div class="platoTitle">
-                <h2>VOY A TU EMPRESA</h2>
-            </div>
+  <section>
+    <div class="platoImgContainer">
+      <img src={empresa.src} alt="" />
+      <div class="platoTitle">
+        <h2>VOY A TU EMPRESA</h2>
+      </div>
+    </div>
+    <div class="platoDescripcion">
+      <h3 class="subtitulo">
+        RESTAURANTES, OFICINAS, CUALQUIER TIPO DE DESARROLLO LABORAL.
+      </h3>
+      <div class="videoSection">
+        <div class="videoContainer">
+          <iframe
+            id="videoIframe"
+            src={"https://www.youtube.com/embed/9NSwEqbgTMs"}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="video"></iframe>
         </div>
-        <div class="platoDescripcion">
-            <h3 class="subtitulo">
-                RESTAURANTES, OFICINAS, CUALQUIER
-                TIPO DE DESARROLLO LABORAL.
-            </h3>
-            <div class="videoSection">
-                <div class="videoContainer">
-            <iframe
-                id="videoIframe"
-                src={"https://www.youtube.com/embed/9NSwEqbgTMs"}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                title="video"
-                ></iframe>
+      </div>
+      <div class="cuadroDescripcion">
+        <h4>CHARLAS A EMPRESAS</h4>
+      </div>
 
+      <div class="descripcion">
+        <p class="descripcionText">
+          Mi objetivo es que, con mis charlas, tus empleados encuentren
+          inspiración, eleven su crecimiento y descubran su motor interno,
+          generando entusiasmo día a día en las tareas que realizan en su
+          trabajo. Que puedan encontrar aprendizaje dentro del rol que
+          desempeñan y, de esa forma, desarrollen su máximo crecimiento
+          personal, reflejando ese mismo progreso en tu empresa.
+        </p>
+      </div>
+
+      <div class="cuadroBienes">
+        <h4>DEJA TODO EN MIS MANOS</h4>
+        <div class="bienesDescripcion">
+          <div class="manos">
+            <div class="manosDivision">
+              <p class="divisionText">
+                Me involucro al 100% en cada proyecto, buscando constantemente
+                nuevos desafíos y oportunidades para crecer profesionalmente.
+                Estoy convencida de que puedo ser un activo valioso para tu
+                empresa.
+              </p>
+            </div>
+
+            <ul class="items">
+              <li>Charlas</li>
+              <li>Ventas</li>
+              <li>Comercialización de desarrollos.</li>
+              <li>Chief (dirección de equipos).</li>
+              <li>Liderazgo y comunicación.</li>
+            </ul>
+          </div>
         </div>
-            </div>
-            <div class="cuadroDescripcion">
-                <h4>
-                    CHARLAS A EMPRESAS
-                </h4>
-                
-            </div>
-            
-            <div class="descripcion">
-                <p class="descripcionText">Mi objetivo es que, con mis charlas, tus empleados encuentren inspiración, eleven su crecimiento y descubran su motor interno, generando entusiasmo día a día en las tareas que realizan en su trabajo. Que puedan encontrar aprendizaje dentro del rol que desempeñan y, de esa forma, desarrollen su máximo crecimiento personal, reflejando ese mismo progreso en tu empresa.</p>
-                </div>
-                
-                
-                <div class="cuadroBienes">
-                    <h4>DEJA TODO EN MIS MANOS</h4>
-                    <div class="bienesDescripcion">
-                        
-                            
-                            <div class="manos">
-                                
-                                <div class="manosDivision">
-                                    
-                                    
-                                    
-                                    <p class="divisionText">
-                                        Me involucro al 100% en cada proyecto, buscando constantemente nuevos desafíos y oportunidades para crecer profesionalmente. Estoy convencida de que puedo ser un activo valioso para tu empresa.
-                                    </p>
-                                </div>
-                                
-                                <ul class="items">
-                                    <li>Charlas</li>
-                                    <li>Ventas</li>
-                                    <li>Comercialización de
-                                        desarrollos.
-                                    </li>
-                                    <li>Chief (dirección de equipos).</li>
-                                    <li>Liderazgo y comunicación.</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                        
-                        
-                    </div>
-                    
-                    <div class="datosContainer">
-                
-                        <LlenarDatos plato={voyEmpresa} client:load />
-                        </div>
-                </section>
-                
-            </Layout>
-            
-<style>
-    .datosContainer{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 550px;
-        width: 100%;
-        margin-top: 50px;
-        
+      </div>
+
+      <div class="datosContainer">
+        <LlenarDatos plato={voyEmpresa} client:load />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .datosContainer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 550px;
+      width: 100%;
+      margin-top: 50px;
     }
-    .videoSection{
-    margin-bottom: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.videoContainer{
-    aspect-ratio: 16 / 9;
-    width: 1000px;
-    position: relative;
-}
-.videoContainer iframe{
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-    
-}
-    section{
-        
+    .videoSection {
+      margin-bottom: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .platoImgContainer{
-        position: relative;
-        width: 100%;
-        height: 70vh;
+    .videoContainer {
+      aspect-ratio: 16 / 9;
+      width: 1000px;
+      position: relative;
     }
-    .platoImgContainer img{
-        width: 100%;
+    .videoContainer iframe {
+      border-radius: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    section {
+    }
+    .platoImgContainer {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+    }
+    .platoImgContainer img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .platoTitle {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 80%,
+        #161616
+      );
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      color: white;
+    }
+    .platoTitle span {
+      margin: 0px;
+      margin-bottom: 30px;
+      font-family: "TightB", sans-serif;
+      font-size: 1.5rem;
+    }
+    .platoTitle h2 {
+      width: 80%;
+      margin: 0px;
+      font-family: "TightBlack", sans-serif;
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    .platoDescripcion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .platoDescripcion .subtitulo {
+      text-align: center;
+      width: 500px;
+      margin-top: 50px;
+      margin-bottom: 70px;
+      color: rgb(255, 255, 255);
+      font-family: "TightR", sans-serif;
+      font-weight: 400;
+    }
+    .cuadroBienes {
+      border: 2px solid red;
+      color: white;
+      width: 700px;
+      margin-top: 50px;
+      border-radius: 25px;
+      box-sizing: border-box;
+    }
+    .cuadroBienes h4 {
+      padding: 20px;
+      margin: 0px;
+      font-family: "TightEB", sans-serif;
+    }
+    .bienesDescripcion .text {
+      padding: 20px;
+      margin: 0px;
+      border-top: 2px solid red;
+      font-family: "TightR", sans-serif;
+      font-weight: 100;
+    }
+    .manos {
+      width: 100%;
+      display: flex;
+      border-top: 2px solid red;
+    }
+    .manosDivision {
+      width: 50%;
+    }
+    .manos .tituloManos {
+      margin: 0px;
+      padding: 20px;
+      padding-top: 20px;
+      font-family: "TightEB", sans-serif;
+    }
+    .manos .divisionText {
+      margin: 0px;
+      padding: 20px;
+      padding-top: 20px;
+      font-family: "TightR", sans-serif;
+      font-weight: 100;
+    }
+    .manos .items {
+      font-family: "TightR", sans-serif;
+      font-weight: 100;
+      margin: 0px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+    .cuadroDescripcion {
+      color: white;
+      width: 700px;
+      border: 2px solid white;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    }
+    .cuadroDescripcion span {
+      font-family: "TightR", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 100;
+      font-style: italic;
+    }
+    .cuadroDescripcion h4 {
+      margin: 0px;
+      padding-top: 20px;
+      font-family: "TightEB", sans-serif;
+    }
+    .descripcion {
+      width: 700px; /* Ancho total del contenedor */
+      height: fit-content;
+      overflow: hidden; /* El contenido que exceda el height no se muestra */
+      border: 2px solid #ccc;
+      border-top: none;
+      color: white;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .descripcionText {
+      font-family: "TightR", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 100;
+      column-count: 2;
+      margin: 0px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0px;
+      padding-top: 10px;
+    }
+    .buttons a {
+      padding: 6px 14px;
+      background-color: red;
+      border-radius: 20px;
+      color: white;
+      text-decoration: none;
+      font-family: "TightEB", sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+    .buttons .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+      border-radius: 100%;
+      height: 20px;
+      width: 20px;
+    }
+    @media screen and (max-width: 1024px) {
+      .platoImgContainer {
+        height: 50vh;
+      }
+      .platoImgContainer img {
         height: 100%;
+        width: 100%;
         object-fit: cover;
-    }
-    .platoTitle{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        
-        align-items: center;
-        color: white;
-    }
-    .platoTitle span{
-        margin: 0px;
-        margin-bottom: 30px;
-        font-family: 'TightB', sans-serif;
-        font-size: 1.5rem;
-    }
-    .platoTitle h2{
+      }
+      .platoTitle h2 {
+        font-size: 2rem;
+      }
+      .platoDescripcion .subtitulo {
         width: 80%;
-        margin: 0px;
-        font-family: 'TightBlack', sans-serif;
-        font-size: 5rem;
-        text-align: center;
-    }
-    
-    .platoDescripcion{
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .platoDescripcion .subtitulo{
-        text-align: center;
-        width: 500px;
-        margin-top: 50px;
-        margin-bottom: 70px;
-        color: rgb(255, 255, 255);
-        font-family: 'TightR', sans-serif;
-        font-weight: 400;
-    }
-    .cuadroBienes{
-        border: 2px solid red;
-        color: white;
-        width: 700px;
-        margin-top: 50px;
-        border-radius: 25px;
-        box-sizing: border-box;
-    }
-    .cuadroBienes h4{
-        padding: 20px;
-        margin: 0px;
-        font-family: 'TightEB', sans-serif;
-    }
-    .bienesDescripcion .text{
-        padding: 20px;
-        margin: 0px;
-        border-top: 2px solid red;
-        font-family: 'TightR', sans-serif;
-        font-weight: 100;
-    }
-    .manos{
-        width: 100%;
-        display: flex;
-        border-top: 2px solid red;
-    }
-    .manosDivision{
-        width: 50%;
-    }
-    .manos .tituloManos{
-        
-        margin: 0px;
-        padding: 20px;
-        padding-top: 20px;
-        font-family: 'TightEB', sans-serif;
-    }
-    .manos .divisionText{
-        margin: 0px;
-        padding: 20px;
-        padding-top: 20px;
-        font-family: 'TightR', sans-serif;
-        font-weight: 100;
-    }
-    .manos .items{
-        font-family: 'TightR', sans-serif;
-        font-weight: 100;
-        margin: 0px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding-bottom: 20px;
-        padding-top: 10px;
-    }
-    .cuadroDescripcion{
-        color: white;
-        width: 700px;
-        border: 2px solid white;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        padding-left: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-
-    }
-    .cuadroDescripcion span{
-        font-family: 'TightR', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 100;
-        font-style: italic;
-    }
-    .cuadroDescripcion h4{
-        margin: 0px;
-        padding-top: 20px;
-        font-family: 'TightEB', sans-serif;
-    }
-    .descripcion{
-        width: 700px;  /* Ancho total del contenedor */
-        height: fit-content; 
-        overflow: hidden;  /* El contenido que exceda el height no se muestra */
-        border: 2px solid #ccc;
-        border-top: none;
-        color: white;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .descripcionText{
-        font-family: 'TightR', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 100;
-        column-count: 2;
-        margin: 0px;
-    }
-    
-    .buttons{
-        margin-top: 30px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 0px;
-        padding-top: 10px;
-    }
-    .buttons a{
-        padding: 6px 14px;
-        background-color: red;
-        border-radius: 20px;
-        color: white;
-        text-decoration: none;
-        font-family: 'TightEB', sans-serif;
-        font-weight: 800;
         font-size: 0.8rem;
+        margin-top: 20px;
+      }
+      .cuadroBienes {
+        width: 90%;
+      }
+      .cuadroDescripcion {
+        width: 90%;
+      }
+      .descripcion {
+        width: 90%;
+      }
     }
-    .buttons .arrow{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2px;
-        border-radius: 100%;
-        height: 20px;
-        width: 20px;
-        
-    }
-    @media  screen and (max-width: 1024px){
-        .platoImgContainer{
-            height: 50vh;
-        }
-        .platoImgContainer img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            
-        }
-        .platoTitle h2{
-            font-size: 2rem;
-            
-        }
-        .platoDescripcion .subtitulo{
-            width: 80%;
-            font-size: 0.8rem;
-            margin-top: 20px;
-        }
-        .cuadroBienes{
-            width: 90%;
-        }
-        .cuadroDescripcion{
-            width: 90%;
-        }
-        .descripcion{
-            width: 90%;
-        }
-        
-    }
-    @media screen and (max-width: 768px){
-        .descripcionText{
-            column-count: 1;
-        }
-        .manos{
+    @media screen and (max-width: 768px) {
+      .descripcionText {
+        column-count: 1;
+      }
+      .manos {
         width: 100%;
         display: flex;
         flex-direction: column;
-        
+
         border-top: 2px solid red;
-    }
-    .manosDivision{
+      }
+      .manosDivision {
         width: 100%;
-    }
-    .divisionText{
+      }
+      .divisionText {
         width: 90%;
+      }
     }
-    }
-</style>
+  </style></Layout
+>

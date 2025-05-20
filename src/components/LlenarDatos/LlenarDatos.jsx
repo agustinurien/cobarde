@@ -3,6 +3,7 @@ import Boton from "../botonMercadoPago/Boton";
 import "./llenarDatos.css";
 
 const LlenarDatos = ({ plato }) => {
+  console.log(plato);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [numero, setNumero] = useState("");
@@ -61,8 +62,8 @@ const LlenarDatos = ({ plato }) => {
           onChange={(e) => setNumero(e.target.value)}
           required
         />
-        {plato.titulo === "empresa" ||
-          (plato.titulo === "renova" && (
+        {plato.titulo !== "UN VIAJE HACIA TU VERDADERO POTENCIAL" &&
+          plato.titulo !== "VOY A TU EMPRESA" && (
             <div className="selectPaquete">
               <div className="selectPaquete">
                 <h3>Solo para parejas. Incorpora un paquete adicional:</h3>
@@ -93,8 +94,7 @@ const LlenarDatos = ({ plato }) => {
                 </label>
               </div>
             </div>
-          ))}
-
+          )}
         <Boton plato={datosCompletos} />
       </div>
     </div>
