@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .llenarDatos {
@@ -61,4 +61,34 @@ h2 {
   border: none;
   margin-bottom: 10px;
   width: 410px;
+}
+
+@media  screen and (max-width: 768px) {
+  .llenarDatos {
+    width: 90%;
+    box-sizing: border-box;
+    
+  }
+  .llenarDatos h2{
+    width: 100%;
+    font-size: 1rem;
+    
+  }
+  .inputPago {
+    width: 100%;
+  }
+  .selectPaquete {
+    width: 100%;
+  }
+  .selectPaqueteRadio {
+    width: 100%;
+  }
+  .selectPaquete label {
+    
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  
 }

@@ -43,7 +43,7 @@ const LlenarDatos = ({ plato }) => {
           type="text"
           placeholder="Nombre"
           value={name}
-          onChange={(e) => setNombre(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           required
         />
         <input

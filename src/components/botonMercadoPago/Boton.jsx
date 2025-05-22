@@ -46,7 +46,7 @@ const Boton = (plato) => {
 
   const emailValido =
     usuario.email && usuario.email.includes("@") && usuario.email.includes(".");
-  const camposIncompletos = !emailValido || !usuario.numero || !usuario.nombre;
+  const camposIncompletos = !emailValido || !usuario.numero || !usuario.name;
 
   return (
     <div className="buttonsMercadoPago">

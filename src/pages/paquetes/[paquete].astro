@@ -67,14 +67,14 @@ const plato = datos[paquete];
 
     <section class={paquete}>
 
-        <div class="platoImgContainer">
+        <div class={paquete === "plato_principal" ? "platoImgContainer loboImage" : "platoImgContainer"}>
             {
                 paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
             || paquete === "entrada" && <img src={fuckyou.src} alt="" class="img2">
             }
             
 
-            <img src={plato.src.src} alt="">
+            <img src={plato.src.src} alt="" >
             
             <div class="platoTitle">
                 <span>
@@ -408,5 +408,20 @@ const plato = datos[paquete];
     .postre .descripcion p{
         column-count: 1;
     }
+    .loboImage{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: 40vh;
+    }
+    .loboImage img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    
+    
 }
 </style>
