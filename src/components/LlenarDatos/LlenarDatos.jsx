@@ -10,7 +10,7 @@ const LlenarDatos = ({ plato }) => {
   const [paquete, setPaquete] = useState("no"); // Estado para el paquete adicional
 
   // Precio del paquete 3
-  const parejaPrecio = 900000;
+  const parejaPrecio = 800000;
   let precioFinal = plato.precio;
 
   // Si se selecciona "sí", sumamos el precio del paquete 3
