@@ -1,16 +1,16 @@
 ---
 export async function getStaticPaths() {
-    return [
-        { params: { paquete: "entrada" } },
-        { params: { paquete: "plato_principal" } },
-        { params: { paquete: "postre" } },
-    ];
+  return [
+    { params: { paquete: "entrada" } },
+    { params: { paquete: "plato_principal" } },
+    { params: { paquete: "postre" } },
+  ];
 }
 
 import entrada from "../../../public/images/EXCUSAS.jpg";
 import platoPrincipal from "../../../public/images/CUANTO.jpg";
 import ojosYanina from "../../../public/images/cuantoVales2.jpg";
-import fuckyou from "../../../public/images/fuckyou.jpg"
+import fuckyou from "../../../public/images/fuckyou.jpg";
 import postre from "../../../public/images/MANIFESTACIÓN.png";
 
 import Layout from "../../layouts/Layout.astro";
@@ -20,408 +20,417 @@ import LlenarDatos from "../../components/LlenarDatos/LlenarDatos";
 const { paquete } = Astro.params;
 
 const datos = {
-    entrada: {
-        precio: 400000,
-        video: "",
-        src: entrada,
-        titulo: "DEJÁ ATRÁS TUS EXCUSAS",
-        bold: "HACETE CARGO DE TU VIDA, ",
-        top: "DECIDÍ QUIEN QUERÉS SER REALMENTE.", 
-        subtitulo: "!ELIMINA ESE GRAN CONEJO BLANCO!",
-        descripcionTitulo: "ENTRADA",
-        descripcion3: "Lo opuesto a la responsabilidad es la culpa. Para eliminar las emociones negativas, debemos asumir que no existe culpa, sino situaciones llenas de responsabilidades y desafíos.\n\n ¿Sos un lanzador o un receptor de culpas? \n\n El perdón es libertad y paz mental… Eso es lo que obtenés.",
-        descripcion2: "Una vez que lo sepamos, podremos dar ese doble salto hacia el jardín de la madurez. Ahí entenderás que todo es nuestra responsabilidad.\n\n Hacernos cargo de nuestra vida significa eliminar las emociones negativas, decidir quién queremos ser y poner nuestra fe únicamente en nosotros mismos para lograr nuestros propósitos. Las personas más felices son las que tienen control de sí mismas y son libres.\n\n NO TE DAS UNA IDEA DE LO BIEN QUE SE SIENTE.",
-        descripcion: "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
-    },
-    plato_principal: {
-        precio: 400000,
-        video:  "https://www.youtube.com/embed/gOZDE63WcUI",
-        src: platoPrincipal,
-        bold: "",
-        top: "",
-        titulo: "¿SABES CUÁNTO REALMENTE VALES?",
-        subtitulo: "AUTO COMPRENSION DE UNO MISMO.",
-        descripcionTitulo: "PLATO PRINCIPAL",
-        descripcion:"Preguntarte cuánto valés es comenzar entender lo que es realmente amarte.\n Cuando te querés de verdad, elegís escuchas tu voz interna y reconocé con claridad a esas personas que también se valoran como vos. Así transformás el verdadero valor de todo, tanto en lo emocional como en lo material.",
-        descripcion2:"Saber cuánto vale tu tiempo es una forma de amarte, Lo mismo pasa con tu dedicación y tu esfuerzo en el trabajo y cada situación en la que te expongas y des esa parte de vos, por eso reconocer tu valor y poner limites, es amarte.\n\nte pregunto: ¿Cuánto vale tu vida? ¿Y cuánto valés vos en el mundo?",
-        descripcion3: "Esto hay que aplicarlo en todos los ámbitos que quieras, pero lo más importante es entender, desde la raíz, cómo cambia todo cuando empezás a verte de otra manera. Eso es lo que realmente construye relaciones sanas simples y poderosas."
-    },
-    postre: {
-        precio: 400000,
-        video: "https://www.youtube.com/embed/Jk912MRuB-M",
-        src: postre,
-        bold: "",
-        top: "PROGRAMÁ TU NUEVO SER.",
-        titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
-        subtitulo: "IMAGINACION CREATIVA",
-        descripcionTitulo: "POSTRE",
-        descripcion: "¿Estás listo para saber qué es lo que realmente querés para tu vida y dispuesto a persistir hasta que eso suceda? Te mostraré la forma más clara y simple de hacerlo. Luego, aprenderás a ver lo que deseás de manera clara y a imprimir esa idea, asumiendo el papel.",
-        descripcion2: "Por último, los decretos son fundamentales, ya que describen lo que deseás, ayudándote a fortalecer la creencia en vos mismo de forma sencilla. A su vez, fortalecen tu vida, generando emociones positivas."
-    },
+  entrada: {
+    precio: 400000,
+    video: "",
+    src: entrada,
+    titulo: "DEJÁ ATRÁS TUS EXCUSAS",
+    bold: "HACETE CARGO DE TU VIDA, ",
+    top: "DECIDÍ QUIEN QUERÉS SER REALMENTE.",
+    subtitulo: "!ELIMINA ESE GRAN CONEJO BLANCO!",
+    descripcionTitulo: "ENTRADA",
+    descripcion3:
+      "Lo opuesto a la responsabilidad es la culpa. Para eliminar las emociones negativas, debemos asumir que no existe culpa, sino situaciones llenas de responsabilidades y desafíos.\n\n ¿Sos un lanzador o un receptor de culpas? \n\n El perdón es libertad y paz mental… Eso es lo que obtenés.",
+    descripcion2:
+      "Una vez que lo sepamos, podremos dar ese doble salto hacia el jardín de la madurez. Ahí entenderás que todo es nuestra responsabilidad.\n\n Hacernos cargo de nuestra vida significa eliminar las emociones negativas, decidir quién queremos ser y poner nuestra fe únicamente en nosotros mismos para lograr nuestros propósitos. Las personas más felices son las que tienen control de sí mismas y son libres.\n\n NO TE DAS UNA IDEA DE LO BIEN QUE SE SIENTE.",
+    descripcion:
+      "Lo primero que debemos reconocer es lo que nos está atascando.\n Para eso, debemos hacernos una gran pregunta:\n\n~ ¿Cuál es nuestro gran conejo blanco? Ese que ocupa gran parte de nuestra mente y, aunque demos un pequeño salto, su cobardía nos deja flotando en el río de las excusas. ¿Cuál es?\n\n ¡YA ES HORA DE QUE LO RECONOZCAS!",
+  },
+  plato_principal: {
+    precio: 400000,
+    video: "https://www.youtube.com/embed/U23BIpLOK9s",
+    src: platoPrincipal,
+    bold: "",
+    top: "",
+    titulo: "¿SABES CUÁNTO REALMENTE VALES?",
+    subtitulo: "AUTO COMPRENSION DE UNO MISMO.",
+    descripcionTitulo: "PLATO PRINCIPAL",
+    descripcion:
+      "Preguntarte cuánto valés es comenzar entender lo que es realmente amarte.\n Cuando te querés de verdad, elegís escuchas tu voz interna y reconocé con claridad a esas personas que también se valoran como vos. Así transformás el verdadero valor de todo, tanto en lo emocional como en lo material.",
+    descripcion2:
+      "Saber cuánto vale tu tiempo es una forma de amarte, Lo mismo pasa con tu dedicación y tu esfuerzo en el trabajo y cada situación en la que te expongas y des esa parte de vos, por eso reconocer tu valor y poner limites, es amarte.\n\nte pregunto: ¿Cuánto vale tu vida? ¿Y cuánto valés vos en el mundo?",
+    descripcion3:
+      "Esto hay que aplicarlo en todos los ámbitos que quieras, pero lo más importante es entender, desde la raíz, cómo cambia todo cuando empezás a verte de otra manera. Eso es lo que realmente construye relaciones sanas simples y poderosas.",
+  },
+  postre: {
+    precio: 400000,
+    video: "https://www.youtube.com/embed/cgpJDOefVM0",
+    src: postre,
+    bold: "",
+    top: "PROGRAMÁ TU NUEVO SER.",
+    titulo: "LA MANIFESTACIÓN DE LO QUE DESEAMOS",
+    subtitulo: "IMAGINACION CREATIVA",
+    descripcionTitulo: "POSTRE",
+    descripcion:
+      "¿Estás listo para saber qué es lo que realmente querés para tu vida y dispuesto a persistir hasta que eso suceda? Te mostraré la forma más clara y simple de hacerlo. Luego, aprenderás a ver lo que deseás de manera clara y a imprimir esa idea, asumiendo el papel.",
+    descripcion2:
+      "Por último, los decretos son fundamentales, ya que describen lo que deseás, ayudándote a fortalecer la creencia en vos mismo de forma sencilla. A su vez, fortalecen tu vida, generando emociones positivas.",
+  },
 };
 
 // Acceder al objeto con el nombre del paquete
 const plato = datos[paquete];
 ---
+
 <Layout>
+  <section class={paquete}>
+    <div
+      class={paquete === "plato_principal"
+        ? "platoImgContainer loboImage"
+        : "platoImgContainer"}
+    >
+      {
+        (paquete === "plato_principal" && (
+          <img src={ojosYanina.src} alt="" class="img2" />
+        )) ||
+          (paquete === "entrada" && (
+            <img src={fuckyou.src} alt="" class="img2" />
+          ))
+      }
 
-    <section class={paquete}>
+      <img src={plato.src.src} alt="" />
 
-        <div class={paquete === "plato_principal" ? "platoImgContainer loboImage" : "platoImgContainer"}>
-            {
-                paquete === "plato_principal" && <img src={ojosYanina.src} alt="" class="img2">
-            || paquete === "entrada" && <img src={fuckyou.src} alt="" class="img2">
-            }
-            
-
-            <img src={plato.src.src} alt="" >
-            
-            <div class="platoTitle">
-                <span>
-                    <strong>
-                        {plato.bold}
-                    </strong>
-                    {plato.top}
-                    </span>
-                <h2>{plato.titulo}</h2>
-            </div>
-        </div>
-        <div class="platoDescripcion">
-            <h3 class="subtitulo">{plato.subtitulo}</h3>
-            {
-                paquete !== "entrada" && 
-            <div class="videoSection">
-                <div class="videoContainer">
-            <iframe
+      <div class="platoTitle">
+        <span>
+          <strong>
+            {plato.bold}
+          </strong>
+          {plato.top}
+        </span>
+        <h2>{plato.titulo}</h2>
+      </div>
+    </div>
+    <div class="platoDescripcion">
+      <h3 class="subtitulo">{plato.subtitulo}</h3>
+      {
+        paquete !== "entrada" && (
+          <div class="videoSection">
+            <div class="videoContainer">
+              <iframe
                 id="videoIframe"
                 src={plato.video}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
                 title="video"
-                ></iframe>
+              />
+            </div>
+          </div>
+        )
+      }
 
-        </div>
-            </div>
-            }
+      <div class="cuadroDescripcion">
+        <h4>{plato.descripcionTitulo}</h4>
+        {
+          paquete === "entrada" && (
+            <span>La vida será lo que tú hagas de ella. – S.S.</span>
+          )
+        }
+      </div>
 
-            <div class="cuadroDescripcion">
-                <h4>{plato.descripcionTitulo}</h4>
-                {paquete === "entrada" && <span>La vida será lo que tú hagas de ella. – S.S.</span>}
-            </div>
-            
-            <div class={"descripcion"}>
-                <p set:html={plato.descripcion.replace(/\n/g, "<br>")}>{plato.descripcion}</p>
-                <p set:html={plato.descripcion2.replace(/\n/g, "<br>")}>{plato.descripcion2}</p>
-                {
-                    plato.descripcion3 && (
-                        <p set:html={plato.descripcion3.replace(/\n/g, "<br>")}>{plato.descripcion3}</p>
-                    )
-                }
-                
-            </div>
-            {
-                paquete === "entrada" && (
-                    <div class="canabis">
-                        <h4>CANNABIS</h4>
-                        <p>En estas charlas te hablo de ser consciente de la hierba que estás consumiendo, sus beneficios y sus contras, cómo consumirla dosificadamente o dejar de consumirla. Es un paso hacia el conocimiento de los efectos que causa en nosotros y la posibilidad de elegir en base a ello.</p>
-                    </div>
-                )
-            }
-            <div class="datosContainer">
-                
-            <LlenarDatos plato={plato} client:load />
-            </div>
-        </div>
-        
-    </section>
+      <div class={"descripcion"}>
+        <p set:html={plato.descripcion.replace(/\n/g, "<br>")}>
+          {plato.descripcion}
+        </p>
+        <p set:html={plato.descripcion2.replace(/\n/g, "<br>")}>
+          {plato.descripcion2}
+        </p>
+        {
+          plato.descripcion3 && (
+            <p set:html={plato.descripcion3.replace(/\n/g, "<br>")}>
+              {plato.descripcion3}
+            </p>
+          )
+        }
+      </div>
+      {
+        paquete === "entrada" && (
+          <div class="canabis">
+            <h4>CANNABIS</h4>
+            <p>
+              En estas charlas te hablo de ser consciente de la hierba que estás
+              consumiendo, sus beneficios y sus contras, cómo consumirla
+              dosificadamente o dejar de consumirla. Es un paso hacia el
+              conocimiento de los efectos que causa en nosotros y la posibilidad
+              de elegir en base a ello.
+            </p>
+          </div>
+        )
+      }
+      <div class="datosContainer">
+        <LlenarDatos plato={plato} client:load />
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-    .datosContainer{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 550px;
-        width: 100%;
-        margin-top: 40px;
-        margin-bottom: 120px;
-        
-    }
-    .videoSection{
+  .datosContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
+  .videoSection {
     margin-bottom: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.videoContainer{
+  }
+  .videoContainer {
     aspect-ratio: 16 / 9;
     width: 1000px;
     position: relative;
-}
-.videoContainer iframe{
+  }
+  .videoContainer iframe {
     border-radius: 0px;
     width: 100%;
     height: 100%;
-    
-}
+  }
 
-    .platoImgContainer{
-        position: relative;
-        width: 100%;
-        height: 80vh;
-    }
-    .platoImgContainer img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .platoImgContainer .img2{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-    .platoImgContainer:hover .img2{
-        opacity: 1;
-        
-    }
+  .platoImgContainer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+  }
+  .platoImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .platoImgContainer .img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .platoImgContainer:hover .img2 {
+    opacity: 1;
+  }
 
-    .platoTitle{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        
-        align-items: center;
-        color: white;
-    }
-    .platoTitle span{
-        margin: 0px;
-        margin-bottom: 50px;
-        font-family: 'TightEB', sans-serif;
-        font-size: 1.5rem;
-    }
-    .entrada .platoTitle h2{
-        width: 80%;
-        margin: 0px;
-        font-family: 'TightBlack', sans-serif;
-        font-weight: 900;
-        font-size: 5.2rem;
-        text-align: center;
-    }
-    .platoTitle h2{
-        width: 55%;
-        margin: 0px;
-        font-family: 'TightBlack', sans-serif;
-        font-weight: 900;
-        font-size: 5rem;
-        text-align: center;
-}
-    
-    .platoDescripcion{
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .platoDescripcion .subtitulo{
-        margin-top: 50px;
-        margin-bottom: 70px;
-        color: rgb(255, 255, 255);
-        font-family: 'TightR', sans-serif;
-        font-weight: 400;
-    }
-    .cuadroDescripcion{
-        color: white;
-        width: 1000px;
-        border: 2px solid white;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-        padding-left: 40px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
+  .platoTitle {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, #161616);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-    }
-    .cuadroDescripcion span{
-        font-family: 'TightR', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 100;
-        font-style: italic;
-    }
-    .cuadroDescripcion h4{
-        margin: 0px;
-        padding-top: 20px;
-        padding-bottom: 5px;
-        font-family: 'TightEB', sans-serif;
-    }
-    .descripcion{
-        display: flex;
-        gap: 40px;
-        height: fit-content;
-        overflow: hidden;  
-        border: 2px solid #ccc;
-        border-top: none;
-        color: white;
-        border-bottom-left-radius: 35px;
-        border-bottom-right-radius: 35px;
-        padding: 20px 40px 40px 40px;
-        box-sizing: border-box;
-        width: 1000px;
-    }
-    .entrada .descripcion p{
-        margin: 0px;
-        font-family: 'TightR', sans-serif;
-        
-    }
-    .plato_principal .descripcion p{
-        margin: 0px;
-        font-family: 'TightR', sans-serif;
-    }
-    .plato_principal .subtitulo{
-        font-family: 'TightB', sans-serif;
-        font-weight: 700;
-    }
-    .postre .descripcion p{
-        margin: 0px;
-        font-family: 'TightR', sans-serif;
-    }
-    .postre .descripcion{
-        width: 700px;
-    }
-    .postre .cuadroDescripcion{
-        width: 700px;
-    }
-    .postre .subtitulo{
-        font-family: 'TightB', sans-serif;
-        font-weight: 700;
+    align-items: center;
+    color: white;
+  }
+  .platoTitle span {
+    margin: 0px;
+    margin-bottom: 50px;
+    font-family: "TightEB", sans-serif;
+    font-size: 1.5rem;
+  }
+  .entrada .platoTitle h2 {
+    width: 80%;
+    margin: 0px;
+    font-family: "TightBlack", sans-serif;
+    font-weight: 900;
+    font-size: 5.2rem;
+    text-align: center;
+  }
+  .platoTitle h2 {
+    width: 55%;
+    margin: 0px;
+    font-family: "TightBlack", sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+  }
 
-    }
-    
-    
-    
-.entrada .canabis{
+  .platoDescripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .platoDescripcion .subtitulo {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: rgb(255, 255, 255);
+    font-family: "TightR", sans-serif;
+    font-weight: 400;
+  }
+  .cuadroDescripcion {
+    color: white;
+    width: 1000px;
+    border: 2px solid white;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .cuadroDescripcion span {
+    font-family: "TightR", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 100;
+    font-style: italic;
+  }
+  .cuadroDescripcion h4 {
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-family: "TightEB", sans-serif;
+  }
+  .descripcion {
+    display: flex;
+    gap: 40px;
+    height: fit-content;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-top: none;
+    color: white;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 20px 40px 40px 40px;
+    box-sizing: border-box;
+    width: 1000px;
+  }
+  .entrada .descripcion p {
+    margin: 0px;
+    font-family: "TightR", sans-serif;
+  }
+  .plato_principal .descripcion p {
+    margin: 0px;
+    font-family: "TightR", sans-serif;
+  }
+  .plato_principal .subtitulo {
+    font-family: "TightB", sans-serif;
+    font-weight: 700;
+  }
+  .postre .descripcion p {
+    margin: 0px;
+    font-family: "TightR", sans-serif;
+  }
+  .postre .descripcion {
+    width: 700px;
+  }
+  .postre .cuadroDescripcion {
+    width: 700px;
+  }
+  .postre .subtitulo {
+    font-family: "TightB", sans-serif;
+    font-weight: 700;
+  }
+
+  .entrada .canabis {
     margin-top: 30px;
     width: 30%;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     border: 2px solid red;
-}
-.entrada .canabis h4{
+  }
+  .entrada .canabis h4 {
     border-bottom: 2px solid red;
     padding-bottom: 20px;
     padding-left: 20px;
-    font-family: 'TightEB', sans-serif;
-}
-.entrada .canabis p{
+    font-family: "TightEB", sans-serif;
+  }
+  .entrada .canabis p {
     width: 85%;
     padding-bottom: 10px;
     padding-left: 20px;
-    font-family: 'TightR', sans-serif;
-}
+    font-family: "TightR", sans-serif;
+  }
 
-@media screen and (max-width: 1024px){
-    .videoContainer{
-        width: 80%;
-        height: fit-content;
+  @media screen and (max-width: 1024px) {
+    .videoContainer {
+      width: 80%;
+      height: fit-content;
     }
-    .videoContainer video{
-        width: 100%;
-        
-        
+    .videoContainer video {
+      width: 100%;
     }
 
-    .platoImgContainer{
+    .platoImgContainer {
+      height: 50vh;
+    }
+    .platoTitle span {
+      margin: 0px;
+      margin-bottom: 30px;
+      font-family: "TightEB", sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      width: 80%;
+    }
+    .cuadroDescripcion {
+      width: 80%;
+    }
+    .descripcion {
+      width: 80%;
+      flex-direction: column;
+    }
+    .entrada .canabis {
+      width: 70%;
+    }
+    .entrada .platoTitle h2 {
+      font-size: 2.8rem;
+      width: 90%;
+    }
+    .entrada .subtitulo {
+      font-size: 0.8rem;
+    }
+    .plato_principal .platoTitle h2 {
+      font-size: 2.8rem;
+      width: 90%;
+    }
+    .plato_principal .subtitulo {
+      font-size: 0.8rem;
+    }
+    .postre .platoTitle h2 {
+      font-size: 2.8rem;
+      width: 90%;
+    }
+    .postre .subtitulo {
+      font-size: 0.8rem;
+    }
+    .postre .descripcion {
+      width: 70%;
+    }
+    .postre .cuadroDescripcion {
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .postre .platoTitle h2 {
+      font-size: 2rem;
+      width: 95%;
+    }
+    .entrada .descripcion p {
+      column-count: 1;
+    }
+    .plato_principal .descripcion p {
+      column-count: 1;
+    }
+    .postre .descripcion p {
+      column-count: 1;
+    }
+    .loboImage {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
 
-        height: 50vh;
+      height: 40vh;
     }
-    .platoTitle span{
-        margin: 0px;
-        margin-bottom: 30px;
-        font-family: 'TightEB', sans-serif;
-        font-size: 1rem;
-        text-align: center;
-        width: 80%;
+    .loboImage img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
     }
-    .cuadroDescripcion{
-        width: 80%;
-    }
-    .descripcion{
-        width: 80%;
-        flex-direction: column;
-    }
-    .entrada .canabis{
-        width: 70%;
-    }
-    .entrada .platoTitle h2{
-        font-size: 2.8rem;
-        width: 90%;
-    }
-    .entrada .subtitulo{
-        font-size: 0.8rem;
-    }
-    .plato_principal .platoTitle h2{
-        font-size: 2.8rem;
-        width: 90%;
-    }
-    .plato_principal .subtitulo{
-        font-size: 0.8rem;
-    }
-    .postre .platoTitle h2{
-        font-size: 2.8rem;
-        width: 90%;
-    }
-    .postre .subtitulo{
-        font-size: 0.8rem;
-        
-    }
-    .postre .descripcion{
-        width: 70%;
-        
-    }
-    .postre .cuadroDescripcion{
-        width: 70%;
-        
-    }
-}
-@media  screen and (max-width: 768px){
-    .postre .platoTitle h2{
-        font-size: 2rem;
-        width: 95%;
-    }
-    .entrada .descripcion p{
-        column-count: 1;
-    }
-    .plato_principal .descripcion p{
-        column-count: 1;
-    }
-    .postre .descripcion p{
-        column-count: 1;
-    }
-    .loboImage{
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        
-        height: 40vh;
-    }
-    .loboImage img{
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    
-    
-}
+  }
 </style>
