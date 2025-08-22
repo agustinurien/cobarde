@@ -129,15 +129,15 @@ const plato = datos[paquete];
 
       <div class={"descripcion"}>
         <p set:html={plato.descripcion.replace(/\n/g, "<br>")}>
-          {plato.descripcion}
+          
         </p>
         <p set:html={plato.descripcion2.replace(/\n/g, "<br>")}>
-          {plato.descripcion2}
+          
         </p>
         {
           plato.descripcion3 && (
             <p set:html={plato.descripcion3.replace(/\n/g, "<br>")}>
-              {plato.descripcion3}
+              
             </p>
           )
         }
