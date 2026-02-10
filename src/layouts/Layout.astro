@@ -1,80 +1,82 @@
 ---
 import Footer from "../components/layout/Footer.astro";
 import Navbar from "../components/layout/Navbar.astro";
+import Socials from "../components/layout/Socials.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/LONEJO.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cobarde</title>
-	</head>
-	<body>
-		<Navbar />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/LONEJO.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cobarde</title>
+  </head>
+  <body>
+    <Navbar />
+    <Socials />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
-	html,
-	body {
-		scroll-behavior: smooth;
-		background-color: #161616;
-		margin: 0;
-		padding: 0;
-	}
-	@font-face {
-		font-family: 'TightELI';
-		src: url('/fonts/InterTight-ExtraLightItalic.ttf') format('truetype');
-		font-weight: 100;
-		font-style: italic;
-		font-display: swap;
-	}
-	
-	@font-face {
-		font-family: 'TightTI';
-		src: url('/fonts/InterTight-Light.ttf') format('truetype');
-		font-weight: 200;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'TightR';
-		src: url('/fonts/InterTight-Regular.ttf') format('truetype');
-		font-weight: 400;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'TightB';
-		src: url('/fonts/InterTight-Bold.ttf') format('truetype');
-		font-weight: 700;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'TightSB';
-		src: url('/fonts/InterTight-SemiBold.ttf') format('truetype');
-		font-weight: 300;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'TightEB';
-		src: url('/fonts/InterTight-ExtraBold.ttf') format('truetype');
-		font-weight: 800;
-		font-style: normal;
-		font-display: swap;
-}
-	@font-face {
-		font-family: 'TightBlack';
-		src: url('/fonts/InterTight-Black.ttf') format('truetype');
-		font-weight: 900;
-		font-style: normal;
-		font-display: swap;
-}
+  html,
+  body {
+    scroll-behavior: smooth;
+    background-color: #161616;
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+    font-family: "TightELI";
+    src: url("/fonts/InterTight-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TightTI";
+    src: url("/fonts/InterTight-Light.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TightR";
+    src: url("/fonts/InterTight-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TightB";
+    src: url("/fonts/InterTight-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TightSB";
+    src: url("/fonts/InterTight-SemiBold.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TightEB";
+    src: url("/fonts/InterTight-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TightBlack";
+    src: url("/fonts/InterTight-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
 </style>

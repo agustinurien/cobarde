@@ -1,0 +1,52 @@
+---
+import { IoLogoInstagram, IoLogoYoutube } from "react-icons/io5";
+---
+
+<div class="socialsContainer">
+  <div class="socials">
+    <a href="https://www.instagram.com/cobardeoficial/" target="_blank"
+      ><IoLogoInstagram />cobardeoficial</a
+    >
+    <a href="https://www.youtube.com/@noseascobarde" target="_blank"
+      ><IoLogoYoutube />noseascobarde</a
+    >
+  </div>
+</div>
+
+<style>
+  .socialsContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #161616a8;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "TightTI", sans-serif;
+  }
+
+  @media screen and (max-width: 768px) {
+    .socials {
+      gap: 30px;
+    }
+    a {
+      font-size: 0.8rem;
+    }
+  }
+</style>

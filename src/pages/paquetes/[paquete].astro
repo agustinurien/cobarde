@@ -80,12 +80,9 @@ const plato = datos[paquete];
         : "platoImgContainer"}
     >
       {
-        (paquete === "plato_principal" && (
+        paquete === "plato_principal" && (
           <img src={ojosYanina.src} alt="" class="img2" />
-        )) ||
-          (paquete === "entrada" && (
-            <img src={fuckyou.src} alt="" class="img2" />
-          ))
+        )
       }
 
       <img src={plato.src.src} alt="" />
@@ -128,17 +125,11 @@ const plato = datos[paquete];
       </div>
 
       <div class={"descripcion"}>
-        <p set:html={plato.descripcion.replace(/\n/g, "<br>")}>
-          
-        </p>
-        <p set:html={plato.descripcion2.replace(/\n/g, "<br>")}>
-          
-        </p>
+        <p set:html={plato.descripcion.replace(/\n/g, "<br>")} />
+        <p set:html={plato.descripcion2.replace(/\n/g, "<br>")} />
         {
           plato.descripcion3 && (
-            <p set:html={plato.descripcion3.replace(/\n/g, "<br>")}>
-              
-            </p>
+            <p set:html={plato.descripcion3.replace(/\n/g, "<br>")} />
           )
         }
       </div>
